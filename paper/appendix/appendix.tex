@@ -1,0 +1,22 @@
+\section{Full Experimental Tables}
+
+The main paper reports compact summary tables for readability. This appendix retains the full runnable model-by-horizon tables generated from the existing paper artifacts. Neural baselines are listed only in the backend-status table; no neural metrics are fabricated.
+
+\subsection{Full Forecasting Results}
+\input{tables/table_forecasting_results}
+
+\subsection{Full Weak Degradation Classification Results}
+\input{tables/table_classification_results}
+
+\subsection{Full Weak Ranking Results}
+\input{tables/table_weak_ranking_results}
+
+\subsection{Full Ablation Delta Table}
+\input{tables/table_ablation_delta}
+
+\subsection{Backend Status}
+\input{tables/table_model_status}
+
+\section{Additional Reproducibility Notes}
+
+All reported runnable metrics are derived from the private \texttt{510957.csv} panel or weak labels fitted from the training split. Forecasting uses real future KPI values. Weak degradation classification uses KPI-threshold labels, and weak root-cause ranking uses train-only alarm-lift/event-intensity candidates. The table and figure source CSV/JSON files are retained in \texttt{paper\_cet\_stgl/source\_artifacts/}. The script \texttt{scripts/build\_cet\_stgl\_paper\_package.py} records the earlier table/figure generation process; the current manuscript does not rerun any model.
