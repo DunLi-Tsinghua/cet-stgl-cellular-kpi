@@ -1,0 +1,17 @@
+{
+  "lookback": 24,
+  "horizons": [1, 3, 6, 12],
+  "target_kpis": [
+    "Call Drop Rate(%)",
+    "RRC Setup Success Rate(%)",
+    "ERAB Setup Success Rate(%)",
+    "LTE_User DL Average Throughput(Mbps)",
+    "LTE_User UL Average Throughput(Mbps)",
+    "LTE_DL PRB Utilizing Rate(%)",
+    "LTE_UL PRB Utilizing Rate(%)",
+    "CQI AVG"
+  ],
+  "train_ratio": 0.7,
+  "val_ratio": 0.15,
+  "alarm_decay_eta_hours": 6.0
+}

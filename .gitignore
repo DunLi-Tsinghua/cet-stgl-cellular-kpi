@@ -1,0 +1,34 @@
+# Private enterprise data
+510957.csv
+**/510957.csv
+data_private/
+data/raw/
+private_data/
+
+# Large/generated private experiment outputs
+results/private_run/
+results/*/forecast_*.csv
+results/*/degradation_*.csv
+results/*/root_cause_ranking_*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# LaTeX build artifacts
+*.aux
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+

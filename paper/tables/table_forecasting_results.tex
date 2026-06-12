@@ -1,0 +1,58 @@
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{0.26\linewidth}rrrrrr@{}}
+\caption{KPI forecasting results over runnable models and horizons.}
+\label{tab:forecasting_results}\\
+\toprule
+Model & H & P-MAE & P-RMSE & P-MAPE & All-MAE & All-RMSE \\
+\midrule
+\endfirsthead
+\toprule
+Model & H & P-MAE & P-RMSE & P-MAPE & All-MAE & All-RMSE \\
+\midrule
+\endhead
+CET w/o alarm tokens & 1 & 2.1569 & 4.6016 & 42.4111 & 30.1717 & 53.1923 \\
+CET w/o cross-cell graph & 1 & 2.1791 & 4.6351 & 42.7362 & 31.1928 & 62.4168 \\
+CET w/o dynamic event graph & 1 & 2.1831 & 4.6351 & 42.6425 & 31.2506 & 62.1414 \\
+CET w/o Hawkes intensity & 1 & 2.1831 & 4.6351 & 42.6425 & 31.2506 & 62.1414 \\
+CET w/o tokenization & 1 & 2.2244 & 4.7059 & 43.4812 & 31.6755 & 61.3319 \\
+CET-STGL-sklearn & 1 & 2.1830 & 4.6351 & 42.6425 & 31.2510 & 62.1427 \\
+Event-attention-only & 1 & 4.6305 & 8.2757 & 82.5194 & 163.9535 & 271.1688 \\
+Hawkes-only & 1 & 4.5779 & 7.9814 & 82.2610 & 160.0211 & 227.2084 \\
+Ridge/Logistic & 1 & 2.2191 & 4.6984 & 43.5993 & 31.4426 & 58.4626 \\
+Ridge/Logistic w/o alarms & 1 & 2.2034 & 4.6712 & 43.3820 & 30.6931 & 53.7885 \\
+CET w/o alarm tokens & 3 & 2.4904 & 4.9744 & 46.8069 & 39.4850 & 67.8885 \\
+CET w/o cross-cell graph & 3 & 2.5354 & 5.0786 & 47.2707 & 42.1875 & 103.4692 \\
+CET w/o dynamic event graph & 3 & 2.5368 & 5.0829 & 47.1621 & 42.1587 & 102.7291 \\
+CET w/o Hawkes intensity & 3 & 2.5368 & 5.0829 & 47.1621 & 42.1587 & 102.7291 \\
+CET w/o tokenization & 3 & 3.0549 & 5.6840 & 56.1056 & 50.7988 & 101.8653 \\
+CET-STGL-sklearn & 3 & 2.5367 & 5.0829 & 47.1624 & 42.1585 & 102.7298 \\
+Event-attention-only & 3 & 4.6346 & 8.3256 & 82.7764 & 164.6453 & 289.4013 \\
+Hawkes-only & 3 & 4.5809 & 8.0385 & 82.5149 & 159.7122 & 227.2520 \\
+Ridge/Logistic & 3 & 3.0709 & 5.6842 & 56.3815 & 50.7191 & 93.6261 \\
+Ridge/Logistic w/o alarms & 3 & 3.0361 & 5.5858 & 56.0146 & 48.9354 & 78.7454 \\
+CET w/o alarm tokens & 6 & 3.1447 & 5.6052 & 56.8431 & 50.7871 & 82.1649 \\
+CET w/o cross-cell graph & 6 & 3.1904 & 5.8644 & 57.2840 & 54.4509 & 133.8707 \\
+CET w/o dynamic event graph & 6 & 3.1970 & 5.8527 & 57.2636 & 54.4014 & 132.2650 \\
+CET w/o Hawkes intensity & 6 & 3.1970 & 5.8527 & 57.2636 & 54.4014 & 132.2650 \\
+CET w/o tokenization & 6 & 3.3631 & 6.0530 & 61.5916 & 65.4517 & 131.9830 \\
+CET-STGL-sklearn & 6 & 3.1971 & 5.8527 & 57.2638 & 54.4004 & 132.2636 \\
+Event-attention-only & 6 & 4.6287 & 8.2769 & 83.1170 & 164.8499 & 295.9310 \\
+Hawkes-only & 6 & 4.5785 & 7.8735 & 82.8707 & 159.5017 & 225.5720 \\
+Ridge/Logistic & 6 & 3.3380 & 5.9402 & 61.5904 & 65.1005 & 118.3171 \\
+Ridge/Logistic w/o alarms & 6 & 3.3177 & 5.8838 & 61.2722 & 62.6208 & 97.5729 \\
+CET w/o alarm tokens & 12 & 2.5147 & 5.0508 & 47.2830 & 42.0699 & 74.8636 \\
+CET w/o cross-cell graph & 12 & 2.6040 & 5.4528 & 47.7833 & 46.2547 & 127.1682 \\
+CET w/o dynamic event graph & 12 & 2.6041 & 5.4421 & 47.6820 & 46.4562 & 126.0803 \\
+CET w/o Hawkes intensity & 12 & 2.6041 & 5.4421 & 47.6820 & 46.4562 & 126.0803 \\
+CET w/o tokenization & 12 & 2.6796 & 5.5472 & 49.0619 & 47.8638 & 124.7888 \\
+CET-STGL-sklearn & 12 & 2.6041 & 5.4421 & 47.6819 & 46.4562 & 126.0802 \\
+Event-attention-only & 12 & 4.6714 & 8.6216 & 83.3406 & 164.9266 & 287.0291 \\
+Hawkes-only & 12 & 4.5719 & 7.8884 & 83.0608 & 160.6519 & 238.1456 \\
+Ridge/Logistic & 12 & 2.6400 & 5.3913 & 49.1403 & 47.3654 & 122.6165 \\
+Ridge/Logistic w/o alarms & 12 & 2.5928 & 5.1347 & 48.8058 & 43.2913 & 76.8817 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\noindent\footnotesize{Note. Forecasting labels are real future KPI values. MAPE uses denominator floor $\max(|y|,1.0)$. Neural baselines are not run because the PyTorch backend is unavailable. Root-cause ranking is weak-label/proxy consistency, not expert-confirmed root cause. The event graph is causal-inspired / causal discovery-based, not confirmed causality.}

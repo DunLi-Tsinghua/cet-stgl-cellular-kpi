@@ -1,0 +1,37 @@
+\section{Methodology}
+
+\subsection{Overview}
+CET-STGL is a causal-inspired event-token spatio-temporal representation pipeline for structured cellular operations data. It contains five feature blocks: KPI patch tokens, alarm event tokens, cell/time positional features, an event influence prior and an inferred cross-cell graph. A full neural CET-STGL implementation would use these blocks in a spatio-temporal graph encoder with forecasting, classification and ranking heads. The present experiments report a runnable sklearn proxy over the same blocks because the project runtime does not include PyTorch. This proxy validates the data protocol, representation design and ablations without implying that the neural graph backend has been executed.
+
+\subsection{KPI Patch Tokens}
+For each KPI $m$ in a lookback window, the sequence $x^{(m)}_{c,t-L+1:t}$ is divided into short patches. Each patch is summarized by simple local statistics:
+\begin{equation}
+    \phi^{\mathrm{kpi}}_{c,t,p,m}=
+    [\mathrm{mean},\mathrm{std},\mathrm{min},\mathrm{max},\mathrm{slope}]_{c,t,p,m}.
+\end{equation}
+These patch summaries preserve local temporal level and trend while reducing raw sequence length. They also make the proxy robust to the multi-column KPI/business schema because all KPI columns can be transformed through the same feature construction rule.
+
+\subsection{Alarm Event Tokens and Intensity Features}
+Alarm/fault observations are represented as sparse event features. For alarm type $a$, we compute rolling counts, recency and a decayed event intensity
+\begin{equation}
+    \lambda_a(c,t)=\sum_{\tau \leq t} \mathbf{1}[a_{c,\tau}>0]\exp\left(-\frac{t-\tau}{\eta}\right),
+\end{equation}
+where $\eta$ is a fixed decay scale in the feature implementation. This is Hawkes-inspired because recent events contribute more strongly than old events \cite{hawkes1971spectra,mei2017neuralhawkes}, but it is not a fitted multi-type Hawkes process. The distinction matters because the current alarm observations are extremely sparse: only 11 of 137 alarm/fault columns are active and only 1.62\% of rows contain an active alarm.
+
+\subsection{Cell and Time Positional Features}
+Cell identity and time context are encoded through cell-code features and cyclical time features such as hour-of-day and day-of-week. These features capture persistent cell offsets and periodic operational behavior. All transformations are fitted within the chronological training protocol, and windows crossing the detected long time gap are excluded.
+
+\subsection{Train-Only Event Influence Prior}
+For each alarm type and horizon, the proxy estimates a train-only lagged lift:
+\begin{equation}
+    \mathrm{lift}_h(a)=
+    \log\frac{P_{\mathrm{train}}(y_{c,t+h}=1 \mid a \in \mathcal{W}_{c,t})+\epsilon}
+    {P_{\mathrm{train}}(y_{c,t+h}=1)+\epsilon}.
+\end{equation}
+The lift is combined with recent intensity to create event influence features. This is an event influence prior: it encodes temporal association between alarms and weak degradation under training data only. It is causal-inspired and leakage-controlled, but it is not evidence of confirmed causal effect.
+
+\subsection{Inferred Cross-Cell Graph}
+The audited data do not include verified physical topology. We therefore infer a cross-cell context graph from training-period statistics, such as KPI correlation. Let $G_{\mathrm{cell}}=(\mathcal{C},E)$ denote the inferred graph. Neighbor features summarize KPI context from cells linked to $c$ in $G_{\mathrm{cell}}$. This graph is a statistical context graph, not a physical deployment graph.
+
+\subsection{Prediction Heads and Proxy Implementation}
+The runnable proxy uses sklearn-compatible heads: Ridge regression for multi-output KPI forecasting, logistic-style classification for weak degradation, and event-lift/intensity scoring for weak ranking. The intended full CET-STGL design would replace these heads with a neural spatio-temporal graph encoder and task-specific projections, conceptually aligned with spatio-temporal graph models \cite{li2018dcrnn,yu2018stgcn,wu2019graphwavenet}. However, because PyTorch is unavailable in the current runtime, LSTM, TCN, Informer, Autoformer, STGCN and GAT are explicitly marked as \texttt{not\_run\_backend\_missing}. No neural metrics are reported or inferred.

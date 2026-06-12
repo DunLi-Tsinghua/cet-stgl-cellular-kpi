@@ -1,0 +1,38 @@
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{0.24\linewidth}p{0.19\linewidth}rrrr@{}}
+\caption{Ablation deltas relative to CET-STGL-sklearn.}
+\label{tab:ablation_delta}\\
+\toprule
+Ablation row & Removed & H & $\Delta$ P-MAE & $\Delta$ AUPRC & $\Delta$ MRR \\
+\midrule
+\endfirsthead
+\toprule
+Ablation row & Removed & H & $\Delta$ P-MAE & $\Delta$ AUPRC & $\Delta$ MRR \\
+\midrule
+\endhead
+CET w/o alarm tokens & no\_alarm & 1 & -0.0262 & 0.0039 &  \\
+CET w/o alarm tokens & no\_alarm & 3 & -0.0463 & 0.0238 &  \\
+CET w/o alarm tokens & no\_alarm & 6 & -0.0524 & 0.0162 &  \\
+CET w/o alarm tokens & no\_alarm & 12 & -0.0893 & 0.0037 &  \\
+CET w/o cross-cell graph & no\_cross\_cell\_graph & 1 & -0.0039 & -0.0181 & 0.0000 \\
+CET w/o cross-cell graph & no\_cross\_cell\_graph & 3 & -0.0014 & 0.0118 & 0.0000 \\
+CET w/o cross-cell graph & no\_cross\_cell\_graph & 6 & -0.0066 & 0.0014 & 0.0000 \\
+CET w/o cross-cell graph & no\_cross\_cell\_graph & 12 & -0.0001 & 0.0045 & 0.0000 \\
+CET w/o dynamic event graph & no\_dynamic\_graph & 1 & 0.0001 & -0.0001 & -0.1052 \\
+CET w/o dynamic event graph & no\_dynamic\_graph & 3 & 0.0000 & 0.0007 & -0.1063 \\
+CET w/o dynamic event graph & no\_dynamic\_graph & 6 & -0.0001 & 0.0022 & -0.1074 \\
+CET w/o dynamic event graph & no\_dynamic\_graph & 12 & -0.0000 & -0.0004 & -0.1080 \\
+CET w/o Hawkes intensity & no\_hawkes\_intensity & 1 & 0.0001 & -0.0001 & 0.0000 \\
+CET w/o Hawkes intensity & no\_hawkes\_intensity & 3 & 0.0000 & 0.0007 & 0.0000 \\
+CET w/o Hawkes intensity & no\_hawkes\_intensity & 6 & -0.0001 & 0.0022 & 0.0000 \\
+CET w/o Hawkes intensity & no\_hawkes\_intensity & 12 & -0.0000 & -0.0003 & 0.0000 \\
+CET w/o tokenization & no\_tokenization & 1 & 0.0414 & -0.0085 & 0.0000 \\
+CET w/o tokenization & no\_tokenization & 3 & 0.5181 & -0.0333 & 0.0000 \\
+CET w/o tokenization & no\_tokenization & 6 & 0.1660 & -0.0155 & 0.0000 \\
+CET w/o tokenization & no\_tokenization & 12 & 0.0755 & -0.0091 & 0.0000 \\
+\bottomrule
+\end{longtable}
+\endgroup
+\noindent\footnotesize{Note. Deltas are computed against CET-STGL-sklearn from existing paper artifacts. Negative MAE deltas are better; positive AUPRC/MRR deltas are better. Neural baselines are not run because the PyTorch backend is unavailable. Root-cause ranking is weak-label/proxy consistency, not expert-confirmed root cause. The event graph is causal-inspired / causal discovery-based, not confirmed causality.}

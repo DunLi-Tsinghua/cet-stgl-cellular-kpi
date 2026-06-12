@@ -1,0 +1,15 @@
+\section{Experimental Setup}
+
+\subsection{Dataset}
+The private panel contains 103,983 rows, 187 original columns, 33 cells and 3,151 unique hourly timestamps from 2024-01-10 00:00:00 to 2024-06-10 06:00:00. It includes 48 KPI/business columns and 137 alarm/fault columns. No missing values were detected. One long gap of 21 days and 1 hour is present, and crossing windows are removed. Table~\ref{tab:data_stats} summarizes the data scale and sparsity.
+
+\subsection{Splits, Labels and Horizons}
+All experiments use chronological splits by timestamp: 70\% train, 15\% validation and 15\% test. All scalers, weak thresholds, inferred graphs and event influence scores are fitted from the training split only. Horizons are 1, 3, 6 and 12 hours. Forecasting labels are real future KPI values. Degradation labels are weak KPI-threshold labels, and ranking labels are weak alarm-lift/event-intensity candidates. These weak labels are useful for protocol development, but they should not be read as expert ground truth \cite{zhou2018weakly}.
+
+\subsection{Compared Models}
+Runnable models include Ridge/Logistic, Ridge/Logistic without alarms, Hawkes-only, Event-attention-only, CET-STGL-sklearn and CET ablations removing alarm tokens, dynamic event graph, Hawkes/event intensity, tokenization and cross-cell graph. Appendix Table~\ref{tab:model_status} reports neural backend status. LSTM, TCN, Informer, Autoformer, STGCN and GAT are not run because PyTorch is unavailable.
+
+\subsection{Metrics}
+Forecasting uses MAE, RMSE and MAPE with denominator floor $\max(|y|,1.0)$. Weak degradation classification uses AUPRC, AUROC, F1, precision and recall. Weak ranking uses Hit@1, Hit@3, Hit@5, MRR and nDCG@5, interpreted as weak-label consistency only.
+
+\input{tables/table_data_statistics}

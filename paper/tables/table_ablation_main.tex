@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Ablation deltas averaged over horizons relative to CET-STGL-sklearn.}
+\label{tab:ablation_main}
+\tiny
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{llrrr}
+\toprule
+Ablation row & Removed component & $\Delta$ MAE & $\Delta$ AUPRC & $\Delta$ MRR \\
+\midrule
+CET w/o alarm tokens & no\_alarm & -0.054 & 0.012 &  \\
+CET w/o cross-cell graph & no\_cross\_cell\_graph & -0.003 & -0.000 & 0.000 \\
+CET w/o dynamic event graph & no\_dynamic\_graph & 0.000 & 0.001 & -0.107 \\
+CET w/o Hawkes intensity & no\_hawkes\_intensity & 0.000 & 0.001 & 0.000 \\
+CET w/o tokenization & no\_tokenization & 0.200 & -0.017 & 0.000 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3em}
+\footnotesize{Note. Negative MAE deltas are better; positive AUPRC/MRR deltas are better. Deltas are derived from existing paper artifacts only. Neural baselines are not run because PyTorch is unavailable. The event graph is causal-inspired / causal discovery-based, not confirmed causality.}
+\end{table}

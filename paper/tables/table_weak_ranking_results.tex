@@ -1,0 +1,58 @@
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{0.24\linewidth}rrrrrrr@{}}
+\caption{Weak root-cause candidate ranking consistency.}
+\label{tab:weak_ranking_results}\\
+\toprule
+Model & H & N & Hit@1 & Hit@3 & Hit@5 & MRR & nDCG@5 \\
+\midrule
+\endfirsthead
+\toprule
+Model & H & N & Hit@1 & Hit@3 & Hit@5 & MRR & nDCG@5 \\
+\midrule
+\endhead
+CET w/o alarm tokens & 1 & 0 &  &  &  &  &  \\
+CET w/o cross-cell graph & 1 & 2682 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+CET w/o dynamic event graph & 1 & 2682 & 0.8084 & 0.9952 & 0.9959 & 0.8948 & 0.9204 \\
+CET w/o Hawkes intensity & 1 & 611 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+CET w/o tokenization & 1 & 2682 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+CET-STGL-sklearn & 1 & 2682 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+Event-attention-only & 1 & 611 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+Hawkes-only & 1 & 2682 & 0.8084 & 0.9952 & 0.9959 & 0.8948 & 0.9204 \\
+Ridge/Logistic & 1 & 611 & 0.9296 & 1.0000 & 1.0000 & 0.9604 & 0.9706 \\
+Ridge/Logistic w/o alarms & 1 & 0 &  &  &  &  &  \\
+CET w/o alarm tokens & 3 & 0 &  &  &  &  &  \\
+CET w/o cross-cell graph & 3 & 2671 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+CET w/o dynamic event graph & 3 & 2671 & 0.8068 & 0.9944 & 0.9951 & 0.8937 & 0.9193 \\
+CET w/o Hawkes intensity & 3 & 609 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+CET w/o tokenization & 3 & 2671 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+CET-STGL-sklearn & 3 & 2671 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+Event-attention-only & 3 & 609 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+Hawkes-only & 3 & 2671 & 0.8068 & 0.9944 & 0.9951 & 0.8937 & 0.9193 \\
+Ridge/Logistic & 3 & 609 & 0.9228 & 1.0000 & 1.0000 & 0.9576 & 0.9685 \\
+Ridge/Logistic w/o alarms & 3 & 0 &  &  &  &  &  \\
+CET w/o alarm tokens & 6 & 0 &  &  &  &  &  \\
+CET w/o cross-cell graph & 6 & 2645 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+CET w/o dynamic event graph & 6 & 2645 & 0.8049 & 0.9940 & 0.9947 & 0.8926 & 0.9183 \\
+CET w/o Hawkes intensity & 6 & 614 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+CET w/o tokenization & 6 & 2645 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+CET-STGL-sklearn & 6 & 2645 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+Event-attention-only & 6 & 614 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+Hawkes-only & 6 & 2645 & 0.8049 & 0.9940 & 0.9947 & 0.8926 & 0.9183 \\
+Ridge/Logistic & 6 & 614 & 0.9169 & 1.0000 & 1.0000 & 0.9555 & 0.9670 \\
+Ridge/Logistic w/o alarms & 6 & 0 &  &  &  &  &  \\
+CET w/o alarm tokens & 12 & 0 &  &  &  &  &  \\
+CET w/o cross-cell graph & 12 & 2617 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+CET w/o dynamic event graph & 12 & 2617 & 0.8040 & 0.9935 & 0.9943 & 0.8920 & 0.9177 \\
+CET w/o Hawkes intensity & 12 & 649 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+CET w/o tokenization & 12 & 2617 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+CET-STGL-sklearn & 12 & 2617 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+Event-attention-only & 12 & 649 & 1.0000 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+Hawkes-only & 12 & 2617 & 0.8040 & 0.9935 & 0.9943 & 0.8920 & 0.9177 \\
+Ridge/Logistic & 12 & 649 & 0.9276 & 1.0000 & 1.0000 & 0.9617 & 0.9717 \\
+Ridge/Logistic w/o alarms & 12 & 0 &  &  &  &  &  \\
+\bottomrule
+\end{longtable}
+\endgroup
+\noindent\footnotesize{Note. Weak root-cause ranking uses train-only alarm-lift/event-intensity proxy labels; it is not expert-confirmed root-cause localization. Perfect scores indicate weak-label consistency when the scoring rule overlaps with the weak-label construction. Neural baselines are not run because the PyTorch backend is unavailable. Root-cause ranking is weak-label/proxy consistency, not expert-confirmed root cause. The event graph is causal-inspired / causal discovery-based, not confirmed causality.}

@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Neural baseline backend status.}
+\label{tab:model_status}
+\scriptsize
+\begin{tabular}{p{0.14\linewidth}p{0.20\linewidth}p{0.58\linewidth}}
+\toprule
+Model & Status & Reason \\
+\midrule
+lstm & \makecell[l]{not\_run\\backend\_missing} & PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable. \\
+tcn & \makecell[l]{not\_run\\backend\_missing} & PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable. \\
+informer & \makecell[l]{not\_run\\backend\_missing} & PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable. \\
+autoformer & \makecell[l]{not\_run\\backend\_missing} & PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable. \\
+stgcn & \makecell[l]{not\_run\\backend\_missing} & PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable. \\
+gat & \makecell[l]{not\_run\\backend\_missing} & PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable. \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3em}
+\footnotesize{Note. No metrics are reported for these neural baselines. Neural baselines are not run because the PyTorch backend is unavailable. Root-cause ranking is weak-label/proxy consistency, not expert-confirmed root cause. The event graph is causal-inspired / causal discovery-based, not confirmed causality.}
+\end{table}

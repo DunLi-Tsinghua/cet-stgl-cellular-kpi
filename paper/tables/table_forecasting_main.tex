@@ -1,0 +1,40 @@
+\begin{table}[t]
+\centering
+\caption{Primary-KPI forecasting summary for runnable models.}
+\label{tab:forecasting_main}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrr}
+\toprule
+Model & H & MAE & RMSE & MAPE \\
+\midrule
+CET w/o alarm tokens & 1 & 2.157 & 4.602 & 42.411 \\
+CET-STGL-sklearn & 1 & 2.183 & 4.635 & 42.642 \\
+Event-attention-only & 1 & 4.630 & 8.276 & 82.519 \\
+Hawkes-only & 1 & 4.578 & 7.981 & 82.261 \\
+Ridge/Logistic & 1 & 2.219 & 4.698 & 43.599 \\
+Ridge/Logistic w/o alarms & 1 & 2.203 & 4.671 & 43.382 \\
+CET w/o alarm tokens & 3 & 2.490 & 4.974 & 46.807 \\
+CET-STGL-sklearn & 3 & 2.537 & 5.083 & 47.162 \\
+Event-attention-only & 3 & 4.635 & 8.326 & 82.776 \\
+Hawkes-only & 3 & 4.581 & 8.038 & 82.515 \\
+Ridge/Logistic & 3 & 3.071 & 5.684 & 56.382 \\
+Ridge/Logistic w/o alarms & 3 & 3.036 & 5.586 & 56.015 \\
+CET w/o alarm tokens & 6 & 3.145 & 5.605 & 56.843 \\
+CET-STGL-sklearn & 6 & 3.197 & 5.853 & 57.264 \\
+Event-attention-only & 6 & 4.629 & 8.277 & 83.117 \\
+Hawkes-only & 6 & 4.578 & 7.873 & 82.871 \\
+Ridge/Logistic & 6 & 3.338 & 5.940 & 61.590 \\
+Ridge/Logistic w/o alarms & 6 & 3.318 & 5.884 & 61.272 \\
+CET w/o alarm tokens & 12 & 2.515 & 5.051 & 47.283 \\
+CET-STGL-sklearn & 12 & 2.604 & 5.442 & 47.682 \\
+Event-attention-only & 12 & 4.671 & 8.622 & 83.341 \\
+Hawkes-only & 12 & 4.572 & 7.888 & 83.061 \\
+Ridge/Logistic & 12 & 2.640 & 5.391 & 49.140 \\
+Ridge/Logistic w/o alarms & 12 & 2.593 & 5.135 & 48.806 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3em}
+\footnotesize{Note. Forecasting targets are real future KPI values. MAPE uses denominator floor $\max(|y|,1.0)$. Neural baselines are not run because PyTorch is unavailable. The event graph is causal-inspired / causal discovery-based, not confirmed causality.}
+\end{table}

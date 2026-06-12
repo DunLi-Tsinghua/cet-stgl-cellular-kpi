@@ -1,0 +1,21 @@
+model_label,ablation,horizon,delta_primary_mae,delta_auprc,delta_mrr
+CET w/o alarm tokens,no_alarm,1,-0.0261881780981791,0.003879090508464,
+CET w/o alarm tokens,no_alarm,3,-0.0462868391151154,0.0237872294473243,
+CET w/o alarm tokens,no_alarm,6,-0.0523605008623504,0.0162439013932554,
+CET w/o alarm tokens,no_alarm,12,-0.0893454429500169,0.0037261110741798,
+CET w/o cross-cell graph,no_cross_cell_graph,1,-0.0039217118280401,-0.0180521720575199,0.0
+CET w/o cross-cell graph,no_cross_cell_graph,3,-0.001364082735269,0.0117520190473187,0.0
+CET w/o cross-cell graph,no_cross_cell_graph,6,-0.0066067117115662,0.0013933637786913,0.0
+CET w/o cross-cell graph,no_cross_cell_graph,12,-0.0001144732305045,0.0044712332203564,0.0
+CET w/o dynamic event graph,no_dynamic_graph,1,7.327673202306428e-05,-0.0001022323878582,-0.1052075565498383
+CET w/o dynamic event graph,no_dynamic_graph,3,3.01352999088067e-05,0.000741211667371,-0.1063272182703107
+CET w/o dynamic event graph,no_dynamic_graph,6,-5.060418434199576e-05,0.0022284272235083,-0.1074354127284183
+CET w/o dynamic event graph,no_dynamic_graph,12,-1.7647973502121772e-05,-0.000377243095646,-0.1080117182524518
+CET w/o Hawkes intensity,no_hawkes_intensity,1,7.327457147754401e-05,-8.84515693844734e-05,0.0
+CET w/o Hawkes intensity,no_hawkes_intensity,3,3.01244618792218e-05,0.0006673249945186,0.0
+CET w/o Hawkes intensity,no_hawkes_intensity,6,-5.057694026877613e-05,0.0021984771094201,0.0
+CET w/o Hawkes intensity,no_hawkes_intensity,12,-1.764586200625473e-05,-0.0003489483015313,0.0
+CET w/o tokenization,no_tokenization,1,0.0413504620253819,-0.0084700399027022,0.0
+CET w/o tokenization,no_tokenization,3,0.5181317747323728,-0.0332909831832586,0.0
+CET w/o tokenization,no_tokenization,6,0.1660235575046615,-0.0155093441385942,0.0
+CET w/o tokenization,no_tokenization,12,0.0755367673599609,-0.0091306240561727,0.0

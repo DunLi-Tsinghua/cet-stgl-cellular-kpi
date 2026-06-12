@@ -1,0 +1,341 @@
+﻿model,model_label,ablation,horizon,task,metric,value,label_type,runnable_status,full_value,delta_vs_full,relative_delta_vs_full_pct
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,forecasting,primary_mae,2.156859838836285,real_kpi,run,2.1830480169344644,-0.026188178098179193,-1.1996153036960602
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,forecasting,primary_rmse,4.601636400940972,real_kpi,run,4.6350947454931966,-0.03345834455222452,-0.7218481258610041
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,forecasting,primary_mape_floor1_pct,42.41108775573882,real_kpi,run,42.64245911703116,-0.23137136129233937,-0.5425844711660425
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,forecasting,all_kpi_mae,30.171722806683885,real_kpi,run,31.251034914152303,-1.079312107468418,-3.4536843673603976
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,forecasting,all_kpi_rmse,53.19228618984124,real_kpi,run,62.14274639934853,-8.950460209507291,-14.40306508500423
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,forecasting,all_kpi_mape_floor1_pct,92.23896378440504,real_kpi,run,92.96752152222587,-0.7285577378208217,-0.7836690985105421
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,forecasting,primary_mae,2.1791263051064242,real_kpi,run,2.1830480169344644,-0.003921711828040131,-0.1796438647990518
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,forecasting,primary_rmse,4.635082832286612,real_kpi,run,4.6350947454931966,-1.1913206584779346e-05,-0.00025702185691808816
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,forecasting,primary_mape_floor1_pct,42.73624086868329,real_kpi,run,42.64245911703116,0.09378175165213065,0.21992575849049648
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,forecasting,all_kpi_mae,31.192815445316324,real_kpi,run,31.251034914152303,-0.05821946883597917,-0.18629613065906492
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,forecasting,all_kpi_rmse,62.416754883585874,real_kpi,run,62.14274639934853,0.27400848423734203,0.4409339788049898
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,forecasting,all_kpi_mape_floor1_pct,93.37136054033628,real_kpi,run,92.96752152222587,0.40383901811041767,0.4343872047980448
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,forecasting,primary_mae,2.1831212936664874,real_kpi,run,2.1830480169344644,7.327673202306428e-05,0.0033566248408023022
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,forecasting,primary_rmse,4.635146511356627,real_kpi,run,4.6350947454931966,5.176586343047518e-05,0.00111682427809719
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,forecasting,primary_mape_floor1_pct,42.64248377656962,real_kpi,run,42.64245911703116,2.4659538460980457e-05,5.782860316123649e-05
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,forecasting,all_kpi_mae,31.25058290103887,real_kpi,run,31.251034914152303,-0.00045201311343134876,-0.001446394062382397
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,forecasting,all_kpi_rmse,62.14142346930573,real_kpi,run,62.14274639934853,-0.001322930042803705,-0.002128856736234583
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,forecasting,all_kpi_mape_floor1_pct,92.96167161218227,real_kpi,run,92.96752152222587,-0.005849910043593809,-0.006292423362276324
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,forecasting,primary_mae,2.183121291505942,real_kpi,run,2.1830480169344644,7.327457147754401e-05,0.0033565258715857068
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,forecasting,primary_rmse,4.635146498671759,real_kpi,run,4.6350947454931966,5.175317856220829e-05,0.001116550608000603
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,forecasting,primary_mape_floor1_pct,42.64248362208766,real_kpi,run,42.64245911703116,2.450505650131163e-05,5.746633052765113e-05
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,forecasting,all_kpi_mae,31.250582994134486,real_kpi,run,31.251034914152303,-0.0004519200178165761,-0.001446096166280625
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,forecasting,all_kpi_rmse,62.14142725857976,real_kpi,run,62.14274639934853,-0.0013191407687713763,-0.0021227590430171355
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,forecasting,all_kpi_mape_floor1_pct,92.96166678112884,real_kpi,run,92.96752152222587,-0.005854741097024885,-0.006297619858162169
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,forecasting,primary_mae,2.2243984789598463,real_kpi,run,2.1830480169344644,0.04135046202538195,1.8941618189162945
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,forecasting,primary_rmse,4.705931652419846,real_kpi,run,4.6350947454931966,0.07083690692664923,1.5282731166504309
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,forecasting,primary_mape_floor1_pct,43.48116528750038,real_kpi,run,42.64245911703116,0.8387061704692229,1.966833498432665
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,forecasting,all_kpi_mae,31.67548641606741,real_kpi,run,31.251034914152303,0.42445150191510805,1.3581998262812458
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,forecasting,all_kpi_rmse,61.33185910596706,real_kpi,run,62.14274639934853,-0.8108872933814695,-1.3048784296890528
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,forecasting,all_kpi_mape_floor1_pct,97.44071740113604,real_kpi,run,92.96752152222587,4.473195878910175,4.811568390409077
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,forecasting,primary_mae,2.490444108225166,real_kpi,run,2.5367309473402813,-0.04628683911511544,-1.824664896513617
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,forecasting,primary_rmse,4.974368579542683,real_kpi,run,5.082903228427403,-0.10853464888471986,-2.1352885153845302
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,forecasting,primary_mape_floor1_pct,46.80693558417895,real_kpi,run,47.16244859481408,-0.3555130106351285,-0.7538052438486417
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,forecasting,all_kpi_mae,39.4850306817069,real_kpi,run,42.15853134079384,-2.6735006590869403,-6.34154125881511
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,forecasting,all_kpi_rmse,67.88850300956844,real_kpi,run,102.72980173986303,-34.8412987302946,-33.91547354342344
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,forecasting,all_kpi_mape_floor1_pct,124.75680478517741,real_kpi,run,125.31675910266273,-0.559954317485321,-0.446831151312006
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,forecasting,primary_mae,2.5353668646050123,real_kpi,run,2.5367309473402813,-0.001364082735269001,-0.053773252409729085
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,forecasting,primary_rmse,5.07862386784857,real_kpi,run,5.082903228427403,-0.004279360578832936,-0.08419126602488801
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,forecasting,primary_mape_floor1_pct,47.27072329161204,real_kpi,run,47.16244859481408,0.10827469679796309,0.2295781920234498
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,forecasting,all_kpi_mae,42.18747874520919,real_kpi,run,42.15853134079384,0.028947404415347933,0.06866321832074251
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,forecasting,all_kpi_rmse,103.46922801197236,real_kpi,run,102.72980173986303,0.739426272109327,0.7197777661264596
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,forecasting,all_kpi_mape_floor1_pct,125.86776319837654,real_kpi,run,125.31675910266273,0.5510040957138074,0.43968907244274535
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,forecasting,primary_mae,2.53676108264019,real_kpi,run,2.5367309473402813,3.01352999088067e-05,0.001187958066282238
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,forecasting,primary_rmse,5.082938366859887,real_kpi,run,5.082903228427403,3.513843248370563e-05,0.000691306344122099
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,forecasting,primary_mape_floor1_pct,47.162126460491756,real_kpi,run,47.16244859481408,-0.0003221343223245299,-0.0006830313775522489
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,forecasting,all_kpi_mae,42.158700018481376,real_kpi,run,42.15853134079384,0.0001686776875331475,0.00040010332942962357
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,forecasting,all_kpi_rmse,102.72908468313751,real_kpi,run,102.72980173986303,-0.0007170567255201377,-0.0006980026373806313
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,forecasting,all_kpi_mape_floor1_pct,125.31222435877645,real_kpi,run,125.31675910266273,-0.0045347438862819445,-0.0036186252491312554
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,forecasting,primary_mae,2.5367610718021605,real_kpi,run,2.5367309473402813,3.0124461879221798e-05,0.0011875308223289022
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,forecasting,primary_rmse,5.082938276165617,real_kpi,run,5.082903228427403,3.504773821383367e-05,0.000689522043579749
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,forecasting,primary_mape_floor1_pct,47.162126178261936,real_kpi,run,47.16244859481408,-0.00032241655214448883,-0.0006836297981779116
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,forecasting,all_kpi_mae,42.15870033818487,real_kpi,run,42.15853134079384,0.0001689973910288245,0.0004008616658457872
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,forecasting,all_kpi_rmse,102.72908913731128,real_kpi,run,102.72980173986303,-0.0007126025517578682,-0.0006936668227612783
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,forecasting,all_kpi_mape_floor1_pct,125.31222214697767,real_kpi,run,125.31675910266273,-0.004536955685054522,-0.0036203902155957698
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,forecasting,primary_mae,3.054862722072654,real_kpi,run,2.5367309473402813,0.5181317747323728,20.42517655550444
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,forecasting,primary_rmse,5.684027913241845,real_kpi,run,5.082903228427403,0.601124684814442,11.826404277234758
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,forecasting,primary_mape_floor1_pct,56.10561044259272,real_kpi,run,47.16244859481408,8.94316184777864,18.962462964151566
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,forecasting,all_kpi_mae,50.79875556930537,real_kpi,run,42.15853134079384,8.640224228511528,20.494604422215705
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,forecasting,all_kpi_rmse,101.86528389899568,real_kpi,run,102.72980173986303,-0.8645178408673502,-0.8415453220249764
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,forecasting,all_kpi_mape_floor1_pct,161.8930607713858,real_kpi,run,125.31675910266273,36.57630166872306,29.187079150968792
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,forecasting,primary_mae,3.1446947701667414,real_kpi,run,3.197055271029092,-0.052360500862350445,-1.6377727759925857
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,forecasting,primary_rmse,5.6051736725553765,real_kpi,run,5.852714542730562,-0.2475408701751851,-4.229505272602888
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,forecasting,primary_mape_floor1_pct,56.843142830102366,real_kpi,run,57.26377951956528,-0.420636689462917,-0.7345597740700966
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,forecasting,all_kpi_mae,50.7870953271935,real_kpi,run,54.40039464373714,-3.613299316543639,-6.642046147287685
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,forecasting,all_kpi_rmse,82.16491862874177,real_kpi,run,132.263576719651,-50.09865809090924,-37.87789452957222
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,forecasting,all_kpi_mape_floor1_pct,183.28180607412415,real_kpi,run,185.2803085230852,-1.9985024489610623,-1.0786372631239745
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,forecasting,primary_mae,3.1904485593175256,real_kpi,run,3.197055271029092,-0.006606711711566238,-0.20664990597549537
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,forecasting,primary_rmse,5.864402568859186,real_kpi,run,5.852714542730562,0.011688026128624074,0.1997026515352835
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,forecasting,primary_mape_floor1_pct,57.28399594506425,real_kpi,run,57.26377951956528,0.020216425498965407,0.035304036283630345
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,forecasting,all_kpi_mae,54.45092988532843,real_kpi,run,54.40039464373714,0.05053524159129097,0.09289499078497743
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,forecasting,all_kpi_rmse,133.8706501480968,real_kpi,run,132.263576719651,1.6070734284457728,1.2150536589919714
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,forecasting,all_kpi_mape_floor1_pct,183.66996609091865,real_kpi,run,185.2803085230852,-1.6103424321665614,-0.8691384664689928
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,forecasting,primary_mae,3.19700466684475,real_kpi,run,3.197055271029092,-5.060418434199576e-05,-0.001582837331608187
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,forecasting,primary_rmse,5.852670239265109,real_kpi,run,5.852714542730562,-4.43034654526997e-05,-0.0007569729418587035
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,forecasting,primary_mape_floor1_pct,57.263585140684846,real_kpi,run,57.26377951956528,-0.0001943788804368296,-0.0003394447276579365
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,forecasting,all_kpi_mae,54.401399347085466,real_kpi,run,54.40039464373714,0.001004703348328917,0.0018468677569503326
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,forecasting,all_kpi_rmse,132.26500065036794,real_kpi,run,132.263576719651,0.001423930716924815,0.0010765856725189066
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,forecasting,all_kpi_mape_floor1_pct,185.28339166280432,real_kpi,run,185.2803085230852,0.00308313971910934,0.0016640406871544005
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,forecasting,primary_mae,3.197004694088823,real_kpi,run,3.197055271029092,-5.057694026877613e-05,-0.001581985170137395
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,forecasting,primary_rmse,5.8526703410420104,real_kpi,run,5.852714542730562,-4.4201688551126495e-05,-0.0007552339726875584
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,forecasting,primary_mape_floor1_pct,57.263584742526255,real_kpi,run,57.26377951956528,-0.00019477703902737176,-0.00034014003382508553
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,forecasting,all_kpi_mae,54.40139940023781,real_kpi,run,54.40039464373714,0.001004756500670112,0.0018469654627510778
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,forecasting,all_kpi_rmse,132.26500205946638,real_kpi,run,132.263576719651,0.0014253398153698527,0.0010776510440142083
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,forecasting,all_kpi_mape_floor1_pct,185.28338983127819,real_kpi,run,185.2803085230852,0.0030813081929750297,0.0016630521708091341
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,forecasting,primary_mae,3.3630788285337534,real_kpi,run,3.197055271029092,0.16602355750466158,5.193014928741619
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,forecasting,primary_rmse,6.052988261462501,real_kpi,run,5.852714542730562,0.200273718731939,3.421894528936005
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,forecasting,primary_mape_floor1_pct,61.59156628939228,real_kpi,run,57.26377951956528,4.327786769827,7.557633823922376
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,forecasting,all_kpi_mae,65.45165182055655,real_kpi,run,54.40039464373714,11.051257176819412,20.314663614470106
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,forecasting,all_kpi_rmse,131.98295140896144,real_kpi,run,132.263576719651,-0.2806253106895724,-0.21217127016335907
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,forecasting,all_kpi_mape_floor1_pct,234.38952898863187,real_kpi,run,185.2803085230852,49.109220465546656,26.505364146361966
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,forecasting,primary_mae,2.5147421488540136,real_kpi,run,2.6040875918040305,-0.0893454429500169,-3.4309691897929278
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,forecasting,primary_rmse,5.050755449901819,real_kpi,run,5.442062712985392,-0.391307263083573,-7.190421788963743
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,forecasting,primary_mape_floor1_pct,47.28302135514121,real_kpi,run,47.68189188633293,-0.39887053119171867,-0.8365241298364822
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,forecasting,all_kpi_mae,42.069895762311056,real_kpi,run,46.45621257494944,-4.386316812638384,-9.441830423781933
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,forecasting,all_kpi_rmse,74.86364319731392,real_kpi,run,126.08017775651236,-51.216534559198436,-40.622194123257394
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,forecasting,all_kpi_mape_floor1_pct,132.59929066463454,real_kpi,run,136.30967695494732,-3.7103862903127833,-2.7220270586798687
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,forecasting,primary_mae,2.603973118573526,real_kpi,run,2.6040875918040305,-0.0001144732305045082,-0.004395905531933537
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,forecasting,primary_rmse,5.452831839768926,real_kpi,run,5.442062712985392,0.010769126783534588,0.1978868556188852
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,forecasting,primary_mape_floor1_pct,47.78326162438929,real_kpi,run,47.68189188633293,0.10136973805636273,0.21259588083881875
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,forecasting,all_kpi_mae,46.25468628377866,real_kpi,run,46.45621257494944,-0.20152629117077936,-0.433798366247894
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,forecasting,all_kpi_rmse,127.16820785259692,real_kpi,run,126.08017775651236,1.088030096084566,0.8629668163902683
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,forecasting,all_kpi_mape_floor1_pct,134.90700952975854,real_kpi,run,136.30967695494732,-1.4026674251887812,-1.029029968028159
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,forecasting,primary_mae,2.6040699438305284,real_kpi,run,2.6040875918040305,-1.7647973502121772e-05,-0.0006777027607545186
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,forecasting,primary_rmse,5.4420601076085555,real_kpi,run,5.442062712985392,-2.605376836051221e-06,-4.787480360772929e-05
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,forecasting,primary_mape_floor1_pct,47.68198028682617,real_kpi,run,47.68189188633293,8.840049324021493e-05,0.00018539636273440984
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,forecasting,all_kpi_mae,46.45621797205323,real_kpi,run,46.45621257494944,5.397103791437985e-06,1.1617614722101265e-05
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,forecasting,all_kpi_rmse,126.08026779961892,real_kpi,run,126.08017775651236,9.004310656735015e-05,7.141733789528957e-05
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,forecasting,all_kpi_mape_floor1_pct,136.30986332566295,real_kpi,run,136.30967695494732,0.0001863707156246619,0.0001367259609061069
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,forecasting,primary_mae,2.6040699459420242,real_kpi,run,2.6040875918040305,-1.764586200625473e-05,-0.0006776216768511319
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,forecasting,primary_rmse,5.442060029508175,real_kpi,run,5.442062712985392,-2.6834772164363585e-06,-4.930992820118135e-05
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,forecasting,primary_mape_floor1_pct,47.68198043641702,real_kpi,run,47.68189188633293,8.855008409369702e-05,0.00018571008949222955
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,forecasting,all_kpi_mae,46.45621828406565,real_kpi,run,46.45621257494944,5.709116209118292e-06,1.2289241616301748e-05
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,forecasting,all_kpi_rmse,126.08026647026536,real_kpi,run,126.08017775651236,8.871375300145701e-05,7.036296631242235e-05
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,forecasting,all_kpi_mape_floor1_pct,136.30986579646128,real_kpi,run,136.30967695494732,0.0001888415139603694,0.00013853859694993245
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,forecasting,primary_mae,2.6796243591639914,real_kpi,run,2.6040875918040305,0.07553676735996095,2.9006999456432045
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,forecasting,primary_rmse,5.547237309785081,real_kpi,run,5.442062712985392,0.10517459679968955,1.9326237558551242
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,forecasting,primary_mape_floor1_pct,49.061869871159274,real_kpi,run,47.68189188633293,1.379977984826347,2.8941342934043486
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,forecasting,all_kpi_mae,47.863789787926144,real_kpi,run,46.45621257494944,1.4075772129767046,3.0299009216599626
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,forecasting,all_kpi_rmse,124.7887711797066,real_kpi,run,126.08017775651236,-1.2914065768057554,-1.0242740768495235
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,forecasting,all_kpi_mape_floor1_pct,140.56628179931332,real_kpi,run,136.30967695494732,4.256604844365995,3.1227458970303887
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,classification,auprc,0.4701631794611201,weak_kpi_degradation,run,0.466284088952656,0.003879090508464078,0.8319156926793485
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,classification,auroc,0.7975311109561158,weak_kpi_degradation,run,0.7943591594724008,0.003171951483715074,0.3993094868852306
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,classification,f1,0.3609001794836394,weak_kpi_degradation,run,0.4787077826725404,-0.11780760318890099,-24.609502383939134
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,classification,precision,0.22145035581158928,weak_kpi_degradation,run,0.3948643410852713,-0.17341398527368201,-43.91735774293002
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,classification,recall,0.9746457867263236,weak_kpi_degradation,run,0.6077554064131245,0.3668903803131991,60.368098159509195
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,classification,positive_rate,0.1721879815100154,weak_kpi_degradation,run,0.1721879815100154,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,classification,auprc,0.4482319168951361,weak_kpi_degradation,run,0.466284088952656,-0.01805217205751991,-3.871496472905133
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,classification,auroc,0.7826502814725056,weak_kpi_degradation,run,0.7943591594724008,-0.011708877999895173,-1.4740030199528387
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,classification,f1,0.3979639055992596,weak_kpi_degradation,run,0.4787077826725404,-0.08074387707328079,-16.86704916776203
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,classification,precision,0.524390243902439,weak_kpi_degradation,run,0.3948643410852713,0.12952590281716775,32.802633547807886
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,classification,recall,0.32065622669649513,weak_kpi_degradation,run,0.6077554064131245,-0.2870991797166294,-47.239263803680984
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,classification,positive_rate,0.1721879815100154,weak_kpi_degradation,run,0.1721879815100154,0.0,0.0
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,classification,auprc,0.4661818565647977,weak_kpi_degradation,run,0.466284088952656,-0.00010223238785828093,-0.021924914506070797
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,classification,auroc,0.794320989003782,weak_kpi_degradation,run,0.7943591594724008,-3.8170468618758946e-05,-0.004805190216993418
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,classification,f1,0.4784014105201293,weak_kpi_degradation,run,0.4787077826725404,-0.00030637215241108295,-0.06399982693004524
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,classification,precision,0.3947623666343356,weak_kpi_degradation,run,0.3948643410852713,-0.00010197445093568236,-0.02582518610199367
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,classification,recall,0.6070096942580164,weak_kpi_degradation,run,0.6077554064131245,-0.0007457121551081025,-0.12269938650306324
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,classification,positive_rate,0.1721879815100154,weak_kpi_degradation,run,0.1721879815100154,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,classification,auprc,0.4661956373832715,weak_kpi_degradation,run,0.466284088952656,-8.84515693844734e-05,-0.018969459065855947
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,classification,auroc,0.7943549665042571,weak_kpi_degradation,run,0.7943591594724008,-4.192968143690301e-06,-0.0005278428647408303
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,classification,f1,0.4784843589367014,weak_kpi_degradation,run,0.4787077826725404,-0.00022342373583900121,-0.04667225892833123
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,classification,precision,0.3947177126241822,weak_kpi_degradation,run,0.3948643410852713,-0.00014662846108909333,-0.037133882661090634
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,classification,recall,0.6073825503355704,weak_kpi_degradation,run,0.6077554064131245,-0.00037285607755410677,-0.06134969325154076
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,classification,positive_rate,0.1721879815100154,weak_kpi_degradation,run,0.1721879815100154,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,classification,auprc,0.4578140490499537,weak_kpi_degradation,run,0.466284088952656,-0.008470039902702287,-1.816497732471907
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,classification,auroc,0.7891619609997286,weak_kpi_degradation,run,0.7943591594724008,-0.005197198472672193,-0.6542630510012726
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,classification,f1,0.4583490388239729,weak_kpi_degradation,run,0.4787077826725404,-0.020358743848567507,-4.252854159777445
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,classification,precision,0.4634146341463415,weak_kpi_degradation,run,0.3948643410852713,0.06855029306107019,17.360466856202315
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,classification,recall,0.453392990305742,weak_kpi_degradation,run,0.6077554064131245,-0.15436241610738255,-25.398773006134967
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,classification,positive_rate,0.1721879815100154,weak_kpi_degradation,run,0.1721879815100154,0.0,0.0
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,classification,auprc,0.3990124607163398,weak_kpi_degradation,run,0.3752252312690154,0.023787229447324365,6.339453604139498
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,classification,auroc,0.7587414638843314,weak_kpi_degradation,run,0.7427137761096159,0.016027687774715527,2.157989832727975
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,classification,f1,0.3481075697211155,weak_kpi_degradation,run,0.146771037181996,0.2013365325391195,137.1772908366535
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,classification,precision,0.5197026022304833,weak_kpi_degradation,run,0.569620253164557,-0.04991765093407374,-8.763320941759611
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,classification,recall,0.2616997379258705,weak_kpi_degradation,run,0.08423811306626731,0.17746162485960315,210.66666666666669
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,classification,positive_rate,0.1722114764667956,weak_kpi_degradation,run,0.1722114764667956,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,classification,auprc,0.3869772503163341,weak_kpi_degradation,run,0.3752252312690154,0.011752019047318707,3.1319906200266074
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,classification,auroc,0.7527301150273691,weak_kpi_degradation,run,0.7427137761096159,0.01001633891775322,1.34861358977606
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,classification,f1,0.4009638554216867,weak_kpi_degradation,run,0.146771037181996,0.25419281823969075,173.19004016064275
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,classification,precision,0.2699896157840083,weak_kpi_degradation,run,0.569620253164557,-0.2996306373805487,-52.601823006807436
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,classification,recall,0.7787345563459378,weak_kpi_degradation,run,0.08423811306626731,0.6944964432796705,824.4444444444446
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,classification,positive_rate,0.1722114764667956,weak_kpi_degradation,run,0.1722114764667956,0.0,0.0
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,classification,auprc,0.3759664429363864,weak_kpi_degradation,run,0.3752252312690154,0.0007412116673710112,0.19753780012719988
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,classification,auroc,0.7429968662089304,weak_kpi_degradation,run,0.7427137761096159,0.0002830900993144869,0.038115638678109846
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,classification,f1,0.1475195822454308,weak_kpi_degradation,run,0.146771037181996,0.0007485450634348023,0.5100087032202456
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,classification,precision,0.5750636132315522,weak_kpi_degradation,run,0.569620253164557,0.005443360066995195,0.9556121006502676
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,classification,recall,0.08461250467989517,weak_kpi_degradation,run,0.08423811306626731,0.00037439161362785855,0.44444444444444897
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,classification,positive_rate,0.1722114764667956,weak_kpi_degradation,run,0.1722114764667956,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,classification,auprc,0.3758925562635341,weak_kpi_degradation,run,0.3752252312690154,0.0006673249945186588,0.1778465142820378
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,classification,auroc,0.7429473808464936,weak_kpi_degradation,run,0.7427137761096159,0.00023360473687772387,0.0314528617068827
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,classification,f1,0.147615937295885,weak_kpi_degradation,run,0.146771037181996,0.0008449001138890189,0.5756586109297185
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,classification,precision,0.578005115089514,weak_kpi_degradation,run,0.569620253164557,0.008384861924957021,1.4720090934924548
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,classification,recall,0.08461250467989517,weak_kpi_degradation,run,0.08423811306626731,0.00037439161362785855,0.44444444444444897
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,classification,positive_rate,0.1722114764667956,weak_kpi_degradation,run,0.1722114764667956,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,classification,auprc,0.3419342480857568,weak_kpi_degradation,run,0.3752252312690154,-0.03329098318325863,-8.872266683844312
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,classification,auroc,0.7235863129844489,weak_kpi_degradation,run,0.7427137761096159,-0.019127463125167,-2.5753478312140543
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,classification,f1,0.3120758249473437,weak_kpi_degradation,run,0.146771037181996,0.1653047877653477,112.62766206412364
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,classification,precision,0.18493863116288745,weak_kpi_degradation,run,0.569620253164557,-0.38468162200166955,-67.53299586251532
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,classification,recall,0.9985024335454886,weak_kpi_degradation,run,0.08423811306626731,0.9142643204792213,1085.3333333333335
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,classification,positive_rate,0.1722114764667956,weak_kpi_degradation,run,0.1722114764667956,0.0,0.0
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,classification,auprc,0.334352494123628,weak_kpi_degradation,run,0.3181085927303725,0.01624390139325549,5.106401324727418
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,classification,auroc,0.7167180249285747,weak_kpi_degradation,run,0.7126539452177881,0.0040640797107865945,0.5702739370290871
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,classification,f1,0.3313206577595067,weak_kpi_degradation,run,0.3887303851640513,-0.057409727404544586,-14.76852070113239
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,classification,precision,0.19956666408728624,weak_kpi_degradation,run,0.28350962372117217,-0.08394295963388593,-29.608504477591445
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,classification,recall,0.9750472589792061,weak_kpi_degradation,run,0.6181474480151229,0.3568998109640832,57.73700305810397
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,classification,positive_rate,0.1716306534293686,weak_kpi_degradation,run,0.1716306534293686,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,classification,auprc,0.3195019565090638,weak_kpi_degradation,run,0.3181085927303725,0.0013933637786913144,0.43801513399303976
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,classification,auroc,0.7177823773983766,weak_kpi_degradation,run,0.7126539452177881,0.005128432180588449,0.7196244706147235
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,classification,f1,0.3317960543171919,weak_kpi_degradation,run,0.3887303851640513,-0.05693433084685939,-14.646226027026952
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,classification,precision,0.199737795943549,weak_kpi_degradation,run,0.28350962372117217,-0.08377182777762315,-29.548142556180597
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,classification,recall,0.9792060491493384,weak_kpi_degradation,run,0.6181474480151229,0.3610586011342155,58.40978593272171
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,classification,positive_rate,0.1716306534293686,weak_kpi_degradation,run,0.1716306534293686,0.0,0.0
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,classification,auprc,0.3203370199538808,weak_kpi_degradation,run,0.3181085927303725,0.0022284272235083002,0.7005240582724861
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,classification,auroc,0.7131117420534874,weak_kpi_degradation,run,0.7126539452177881,0.00045779683569924234,0.06423830791525878
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,classification,f1,0.3893826567379294,weak_kpi_degradation,run,0.3887303851640513,0.0006522715738780938,0.16779536634441974
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,classification,precision,0.28533708854074985,weak_kpi_degradation,run,0.28350962372117217,0.0018274648195776844,0.6445865207648016
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,classification,recall,0.6128544423440454,weak_kpi_degradation,run,0.6181474480151229,-0.005293005671077489,-0.8562691131498444
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,classification,positive_rate,0.1716306534293686,weak_kpi_degradation,run,0.1716306534293686,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,classification,auprc,0.3203070698397927,weak_kpi_degradation,run,0.3181085927303725,0.0021984771094201716,0.6911089985185
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,classification,auroc,0.713087220396096,weak_kpi_degradation,run,0.7126539452177881,0.0004332751783078237,0.06079741524133626
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,classification,f1,0.3891619709866922,weak_kpi_degradation,run,0.3887303851640513,0.00043158582264091194,0.11102446299863461
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,classification,precision,0.284936797752809,weak_kpi_degradation,run,0.28350962372117217,0.0014271740316368353,0.5033952685290294
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,classification,recall,0.6136105860113421,weak_kpi_degradation,run,0.6181474480151229,-0.004536862003780784,-0.733944954128451
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,classification,positive_rate,0.1716306534293686,weak_kpi_degradation,run,0.1716306534293686,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,classification,auprc,0.3025992485917783,weak_kpi_degradation,run,0.3181085927303725,-0.015509344138594228,-4.875487331378025
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,classification,auroc,0.6842220607846871,weak_kpi_degradation,run,0.7126539452177881,-0.028431884433101073,-3.989577918412034
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,classification,f1,0.3032750112157918,weak_kpi_degradation,run,0.3887303851640513,-0.08545537394825947,-21.983198949625653
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,classification,precision,0.3728626585769443,weak_kpi_degradation,run,0.28350962372117217,0.08935303485577212,31.51675547481577
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,classification,recall,0.2555765595463138,weak_kpi_degradation,run,0.6181474480151229,-0.3625708884688091,-58.65443425076453
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,classification,positive_rate,0.1716306534293686,weak_kpi_degradation,run,0.1716306534293686,0.0,0.0
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,classification,auprc,0.3769374364871188,weak_kpi_degradation,run,0.373211325412939,0.0037261110741798054,0.9983917476397739
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,classification,auroc,0.7526176344353243,weak_kpi_degradation,run,0.7464560141430587,0.006161620292265524,0.8254498825813795
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,classification,f1,0.333677286211789,weak_kpi_degradation,run,0.3239550338488293,0.009722252362959705,3.0011116812886156
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,classification,precision,0.2007137869501125,weak_kpi_degradation,run,0.19341441708691784,0.007299369863194655,3.7739533449124507
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,classification,recall,0.988536492166603,weak_kpi_degradation,run,0.9965609476499809,-0.008024455483377935,-0.8052147239263825
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,classification,positive_rate,0.172023926904621,weak_kpi_degradation,run,0.172023926904621,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,classification,auprc,0.3776825586332955,weak_kpi_degradation,run,0.373211325412939,0.004471233220356474,1.1980432842999302
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,classification,auroc,0.7499409350858696,weak_kpi_degradation,run,0.7464560141430587,0.003484920942810832,0.46686219640303483
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,classification,f1,0.3212792127921279,weak_kpi_degradation,run,0.3239550338488293,-0.0026758210567013885,-0.8259853304054651
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,classification,precision,0.191453492633585,weak_kpi_degradation,run,0.19341441708691784,-0.0019609244533328463,-1.013846063218562
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,classification,recall,0.9980894153611005,weak_kpi_degradation,run,0.9965609476499809,0.0015284677111195855,0.15337423312883264
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,classification,positive_rate,0.172023926904621,weak_kpi_degradation,run,0.172023926904621,0.0,0.0
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,classification,auprc,0.3728340823172929,weak_kpi_degradation,run,0.373211325412939,-0.0003772430956460737,-0.10108029150205285
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,classification,auroc,0.7463367922054457,weak_kpi_degradation,run,0.7464560141430587,-0.00011922193761304545,-0.01597172979440909
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,classification,f1,0.3243377689342122,weak_kpi_degradation,run,0.3239550338488293,0.00038273508538289036,0.11814450938937725
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,classification,precision,0.19368733754177497,weak_kpi_degradation,run,0.19341441708691784,0.000272920454857134,0.1411065725956133
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,classification,recall,0.9965609476499809,weak_kpi_degradation,run,0.9965609476499809,0.0,0.0
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,classification,positive_rate,0.172023926904621,weak_kpi_degradation,run,0.172023926904621,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,classification,auprc,0.3728623771114077,weak_kpi_degradation,run,0.373211325412939,-0.0003489483015313155,-0.09349885112549099
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,classification,auroc,0.7463356394233518,weak_kpi_degradation,run,0.7464560141430587,-0.00012037471970693936,-0.016126163822945565
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,classification,f1,0.3243176024373562,weak_kpi_degradation,run,0.3239550338488293,0.00036256858852690144,0.11191941801901151
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,classification,precision,0.19367295410663896,weak_kpi_degradation,run,0.19341441708691784,0.00025853701972111676,0.13366998366255897
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,classification,recall,0.9965609476499809,weak_kpi_degradation,run,0.9965609476499809,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,classification,positive_rate,0.172023926904621,weak_kpi_degradation,run,0.172023926904621,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,classification,auprc,0.3640807013567663,weak_kpi_degradation,run,0.373211325412939,-0.00913062405617271,-2.446502406128792
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,classification,auroc,0.7382046729417652,weak_kpi_degradation,run,0.7464560141430587,-0.00825134120129356,-1.1054021998558359
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,classification,f1,0.3633462502849328,weak_kpi_degradation,run,0.3239550338488293,0.03939121643610349,12.15947039566147
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,classification,precision,0.45028248587570624,weak_kpi_degradation,run,0.19341441708691784,0.25686806878878843,132.80709507469413
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,classification,recall,0.30454719144058084,weak_kpi_degradation,run,0.9965609476499809,-0.6920137562094001,-69.44018404907976
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,classification,positive_rate,0.172023926904621,weak_kpi_degradation,run,0.172023926904621,0.0,0.0
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,ranking,hit_at_1,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,ranking,hit_at_3,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,ranking,hit_at_5,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,ranking,mrr,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,1,ranking,ndcg_at_5,,weak_root_cause,run,1.0,,
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,ranking,hit_at_1,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,ranking,hit_at_3,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,ranking,hit_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,ranking,mrr,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,1,ranking,ndcg_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,ranking,hit_at_1,0.808351976137211,weak_root_cause,run,1.0,-0.191648023862789,-19.1648023862789
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,ranking,hit_at_3,0.9951528709917972,weak_root_cause,run,1.0,-0.004847129008202833,-0.4847129008202833
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,ranking,hit_at_5,0.9958985831469052,weak_root_cause,run,1.0,-0.004101416853094841,-0.41014168530948414
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,ranking,mrr,0.8947924434501616,weak_root_cause,run,1.0,-0.10520755654983838,-10.520755654983837
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,1,ranking,ndcg_at_5,0.920380317190695,weak_root_cause,run,1.0,-0.07961968280930498,-7.961968280930498
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,ranking,hit_at_1,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,ranking,hit_at_3,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,ranking,hit_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,ranking,mrr,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,1,ranking,ndcg_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,ranking,hit_at_1,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,ranking,hit_at_3,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,ranking,hit_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,ranking,mrr,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,1,ranking,ndcg_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,ranking,hit_at_1,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,ranking,hit_at_3,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,ranking,hit_at_5,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,ranking,mrr,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,3,ranking,ndcg_at_5,,weak_root_cause,run,1.0,,
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,ranking,hit_at_1,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,ranking,hit_at_3,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,ranking,hit_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,ranking,mrr,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,3,ranking,ndcg_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,ranking,hit_at_1,0.8068139273680269,weak_root_cause,run,1.0,-0.19318607263197307,-19.318607263197308
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,ranking,hit_at_3,0.9943841257955822,weak_root_cause,run,1.0,-0.005615874204417781,-0.5615874204417781
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,ranking,hit_at_5,0.995132909022838,weak_root_cause,run,1.0,-0.004867090977161981,-0.4867090977161981
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,ranking,mrr,0.8936727817296892,weak_root_cause,run,1.0,-0.10632721827031077,-10.632721827031077
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,3,ranking,ndcg_at_5,0.919254616604969,weak_root_cause,run,1.0,-0.08074538339503101,-8.074538339503102
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,ranking,hit_at_1,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,ranking,hit_at_3,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,ranking,hit_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,ranking,mrr,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,3,ranking,ndcg_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,ranking,hit_at_1,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,ranking,hit_at_3,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,ranking,hit_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,ranking,mrr,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,3,ranking,ndcg_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,ranking,hit_at_1,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,ranking,hit_at_3,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,ranking,hit_at_5,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,ranking,mrr,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,6,ranking,ndcg_at_5,,weak_root_cause,run,1.0,,
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,ranking,hit_at_1,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,ranking,hit_at_3,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,ranking,hit_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,ranking,mrr,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,6,ranking,ndcg_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,ranking,hit_at_1,0.8049149338374291,weak_root_cause,run,1.0,-0.19508506616257093,-19.508506616257094
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,ranking,hit_at_3,0.9939508506616256,weak_root_cause,run,1.0,-0.0060491493383744155,-0.6049149338374415
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,ranking,hit_at_5,0.9947069943289224,weak_root_cause,run,1.0,-0.0052930056710776,-0.52930056710776
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,ranking,mrr,0.8925645872715816,weak_root_cause,run,1.0,-0.10743541272841839,-10.743541272841838
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,6,ranking,ndcg_at_5,0.918271864254016,weak_root_cause,run,1.0,-0.08172813574598403,-8.172813574598404
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,ranking,hit_at_1,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,ranking,hit_at_3,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,ranking,hit_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,ranking,mrr,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,6,ranking,ndcg_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,ranking,hit_at_1,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,ranking,hit_at_3,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,ranking,hit_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,ranking,mrr,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,6,ranking,ndcg_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,ranking,hit_at_1,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,ranking,hit_at_3,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,ranking,hit_at_5,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,ranking,mrr,,weak_root_cause,run,1.0,,
+cet_ablation_no_alarm,CET w/o alarm tokens,no_alarm,12,ranking,ndcg_at_5,,weak_root_cause,run,1.0,,
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,ranking,hit_at_1,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,ranking,hit_at_3,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,ranking,hit_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,ranking,mrr,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_cross_cell_graph,CET w/o cross-cell graph,no_cross_cell_graph,12,ranking,ndcg_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,ranking,hit_at_1,0.8039740160489109,weak_root_cause,run,1.0,-0.19602598395108906,-19.602598395108906
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,ranking,hit_at_3,0.9935040122277417,weak_root_cause,run,1.0,-0.006495987772258349,-0.6495987772258349
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,ranking,hit_at_5,0.9942682460833014,weak_root_cause,run,1.0,-0.0057317539166985565,-0.5731753916698556
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,ranking,mrr,0.8919882817475482,weak_root_cause,run,1.0,-0.10801171825245182,-10.80117182524518
+cet_ablation_no_dynamic_graph,CET w/o dynamic event graph,no_dynamic_graph,12,ranking,ndcg_at_5,0.9176794885153722,weak_root_cause,run,1.0,-0.08232051148462782,-8.232051148462782
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,ranking,hit_at_1,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,ranking,hit_at_3,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,ranking,hit_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,ranking,mrr,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_hawkes_intensity,CET w/o Hawkes intensity,no_hawkes_intensity,12,ranking,ndcg_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,ranking,hit_at_1,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,ranking,hit_at_3,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,ranking,hit_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,ranking,mrr,1.0,weak_root_cause,run,1.0,0.0,0.0
+cet_ablation_no_tokenization,CET w/o tokenization,no_tokenization,12,ranking,ndcg_at_5,1.0,weak_root_cause,run,1.0,0.0,0.0

@@ -1,0 +1,27 @@
+\section{Problem Formulation}
+
+Let $\mathcal{C}$ be the set of cells and let $t$ index hourly timestamps. For each cell-time pair $(c,t)$, the panel contains a KPI/business vector $\mathbf{x}_{c,t}\in\mathbb{R}^{M}$, an alarm/fault vector $\mathbf{a}_{c,t}\in\mathbb{R}^{A}$, a cell identifier and timestamp-derived features. In the audited dataset, $|\mathcal{C}|=33$, $M=48$ and $A=137$, although only 11 alarm/fault columns are active in the observed slice. Given a lookback window $\mathcal{W}_{c,t}=\{(\mathbf{x}_{c,\tau},\mathbf{a}_{c,\tau}):t-L+1\leq \tau\leq t\}$, the objective is to predict outcomes at horizon $h\in\{1,3,6,12\}$ hours. Windows crossing the detected long time gap are removed before modeling.
+
+\subsection{KPI Forecasting}
+The forecasting task predicts future KPI values
+\begin{equation}
+    \hat{\mathbf{x}}_{c,t+h} = f_h(\mathcal{W}_{c,t}, c, t).
+\end{equation}
+These labels are real future observations from the private cellular panel. We report aggregate metrics over all KPI/business columns and paper-level metrics over the primary KPI subset.
+
+\subsection{Weak Degradation Classification}
+The degradation task predicts a weak binary label
+\begin{equation}
+    \hat{y}_{c,t+h} = g_h(\mathcal{W}_{c,t}, c, t), \quad y_{c,t+h}\in\{0,1\}.
+\end{equation}
+The label $y_{c,t+h}$ is derived from training-split KPI thresholds, for example high call-drop rate or low throughput/radio-quality conditions. It is a weak KPI degradation label rather than an expert incident label. This distinction follows weak-supervision practice, where indirect or noisy labels can support model development but must be evaluated and interpreted as proxies \cite{zhou2018weakly,ratner2020snorkel}.
+
+\subsection{Weak Root-Cause Candidate Ranking}
+For degraded samples with recent alarms, the ranking task scores candidate alarm types $a\in\mathcal{A}_{c,t}$:
+\begin{equation}
+    s_h(a,c,t)=r_h(a,\mathcal{W}_{c,t},c,t).
+\end{equation}
+The target candidate is induced by train-only alarm-to-degradation lift and recent event intensity. The ranking task therefore evaluates weak-label consistency only. It is not expert-confirmed root-cause localization.
+
+\subsection{Causal-Inspired Graph Boundary}
+The event influence graph is constructed from temporal precedence and train-only association. It is useful for organizing candidate event influence, but the observational data contain no interventions or expert causal annotations. We therefore use causal-inspired or causal discovery-based terminology and avoid claims of confirmed causality.

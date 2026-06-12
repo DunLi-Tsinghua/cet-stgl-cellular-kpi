@@ -1,0 +1,133 @@
+\documentclass[letterpaper,journal]{IEEEtran}
+
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage[hypertexnames=false]{hyperref}
+\usepackage{indentfirst}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{url}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{threeparttable}
+\usepackage{float}
+\usepackage{tikz}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\definecolor{ceblue}{rgb}{ .608,  .761,  .902}
+\definecolor{cellblue}{RGB}{102,  178,  255}
+\definecolor{LightCyan}{rgb}{0.92,1,1}
+
+% ORCID icon support retained from the target Hyper-IIoT template.
+\definecolor{lime}{HTML}{A6CE39}
+\DeclareRobustCommand{\orcidicon}{%
+    \begin{tikzpicture}
+        \draw[lime, fill=lime] (0,0)
+        circle [radius=0.16]
+        node[white] {{\fontfamily{qag}\selectfont \tiny ID}};
+        \draw[white, fill=white] (-0.0625,0.095)
+        circle [radius=0.007];
+    \end{tikzpicture}
+    \hspace{-2mm}
+}
+
+\foreach \x in {A, ..., Z}{%
+    \expandafter\xdef\csname orcid\x\endcsname{\noexpand\href{https://orcid.org/\csname orcidauthor\x\endcsname}{\noexpand\orcidicon}}
+}
+
+\newcommand{\orcidauthorA}{0000-0002-1986-7144}
+\newcommand{\orcidauthorL}{0000-0001-5755-7115}
+\newcommand{\orcidauthorN}{0000-0003-2962-192X}
+\newcommand{\orcidauthorR}{0000-0001-5441-9665}
+\newcommand{\orcidauthorZ}{0000-0002-6851-0117}
+\newcommand{\orcidauthorK}{0000-0003-1381-4364}
+\newcommand{\orcidauthorP}{0000-0002-6747-6367}
+\newcommand{\orcidauthorM}{0000-0003-4119-7340}
+\newcommand{\orcidauthorH}{0000-0002-5883-3780}
+\newcommand{\orcidauthorB}{0000-0001-8861-5461}
+\newcommand{\orcidauthorW}{0000-0002-5074-1363}
+
+\begin{document}
+
+\title{Causal-Inspired Event-Token Spatio-Temporal Graph Learning for Alarm-Driven KPI Degradation Prediction in Cellular Networks}
+
+\author{
+Dun Li\orcidA{},
+Hongzhi Li\orcidH{},
+Noel Crespi\orcidN{},
+Roberto Minerva\orcidR{},
+Ming Li\orcidM{},
+Wei Liang\orcidW{},
+Kuan-Ching Li\orcidK{}
+
+\thanks{
+Dun Li is with the Department of Industrial Engineering, Tsinghua University, China, and Samovar, Telecom SudParis, Institut Polytechnique de Paris, 91120 Palaiseau, France. E-mail:lidunshmtu@outlook.com
+}
+
+\thanks{
+Hongzhi Li is with the College of Big Data and Artificial Intelligence, Chizhou University, Chizhou 247100, China. Email: pickpickup@sohu.com
+}
+
+\thanks{
+Noel Crespi is with Samovar, Telecom SudParis, Institut Polytechnique de Paris, 91120 Palaiseau, France. Email: noel.crespi@mines-telecom.fr
+}
+
+\thanks{
+Roberto Minerva is with Samovar, Telecom SudParis, Institut Polytechnique de Paris, 91120 Palaiseau, France. Email: roberto.minerva@telecom-sudparis.eu
+}
+
+\thanks{
+Ming Li is with the Research Institute for Advanced Manufacturing, The Hong Kong Polytechnic University, Hung Hom, Hong Kong, China. Email: ming.li@polyu.edu.hk
+}
+
+\thanks{
+Wei Liang is with the School of Computer Science and Engineering, Hunan University of Science and Technology, and Hunan Key Laboratory for Service Computing and Novel Software Technology, China. E-mail: wliang@hnust.edu.cn
+}
+
+\thanks{
+Kuan-Ching Li is with the Dept. of Computer Science and Information Engineering, Providence University, Taiwan. E-mail: kuancli@pu.edu.tw}
+
+\thanks{
+Corresponding Authors: Kuan-Ching Li, Noel Crespi, Hongzhi Li}
+}
+
+\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+
+\maketitle
+
+\begin{abstract}
+Cellular network operations are monitored through heterogeneous time-evolving signals, including KPI measurements, business counters, sparse alarm/fault events, cell identifiers and temporal context. Predicting future KPI degradation is operationally important but difficult because alarms are sparse, KPI responses may be delayed, physical topology is often unavailable and expert-confirmed root-cause labels are not always recorded. We study a real private cellular operations panel extracted from \texttt{510957.csv}, containing 103,983 rows, 33 cells, 3,151 hourly timestamps, 48 KPI/business columns and 137 alarm/fault columns, of which 11 are active. We propose CET-STGL, a causal-inspired event-token spatio-temporal learning pipeline that organizes KPI histories into patch tokens, sparse alarms into event tokens, cell/time context into positional features and train-only alarm-degradation associations into an event influence prior with inferred cross-cell context. The current runnable implementation evaluates an sklearn proxy rather than a neural graph backend because PyTorch is unavailable. Experiments cover 1/3/6/12-hour KPI forecasting, weak KPI degradation classification and weak root-cause candidate ranking. Results show strong KPI-history baselines, weak standalone event-only predictors and competitive CET-STGL proxy forecasting on several primary-KPI metrics, while also showing that alarm-token gains are not uniform and weak ranking is not expert root-cause validation.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Cellular networks, KPI forecasting, alarm correlation, weak root-cause ranking, spatio-temporal graph learning, causal-inspired event influence.
+\end{IEEEkeywords}
+
+\input{sections/01_introduction}
+\input{sections/02_related_work}
+\input{sections/03_problem_formulation}
+\input{sections/04_methodology}
+\input{sections/05_experiments}
+\input{sections/06_results}
+\input{sections/07_discussion_limitations}
+\input{sections/08_data_availability_reproducibility}
+\input{sections/09_conclusion}
+
+\clearpage
+\onecolumn
+\appendices
+\input{appendix/appendix}
+
+\ifCLASSOPTIONcaptionsoff
+\newpage
+\fi
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

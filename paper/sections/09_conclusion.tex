@@ -1,0 +1,7 @@
+\section{Conclusion}
+
+This paper presented CET-STGL, a causal-inspired event-token spatio-temporal learning pipeline for alarm-driven KPI degradation prediction in cellular networks. On a real private cellular operations panel, the framework structures KPI histories, sparse alarms, cell/time context and inferred graph information for three tasks: multi-horizon KPI forecasting, weak KPI degradation classification and weak root-cause candidate ranking.
+
+The current evidence supports a calibrated technical claim. The runnable sklearn proxy is competitive with Ridge/Logistic baselines on several primary-KPI forecasting metrics, while event-only and Hawkes-only variants are weak standalone predictors under sparse alarm observations. Ablations show that no-alarm variants can be competitive or better in several settings, so alarm tokens should not be claimed to uniformly improve performance. Weak ranking results should be interpreted only as proxy consistency, not true root-cause validation.
+
+Future work should add expert incident/root-cause annotations, evaluate additional regions or time periods, incorporate verified topology where available and implement the full neural spatio-temporal graph encoder under the same leakage-controlled protocol.

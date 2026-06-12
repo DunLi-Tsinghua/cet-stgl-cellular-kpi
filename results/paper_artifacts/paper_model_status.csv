@@ -1,0 +1,7 @@
+﻿model,status,reason
+lstm,not_run_backend_missing,PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable.
+tcn,not_run_backend_missing,PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable.
+informer,not_run_backend_missing,PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable.
+autoformer,not_run_backend_missing,PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable.
+stgcn,not_run_backend_missing,PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable.
+gat,not_run_backend_missing,PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable.

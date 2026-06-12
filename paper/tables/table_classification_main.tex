@@ -1,0 +1,40 @@
+\begin{table}[t]
+\centering
+\caption{Weak KPI degradation classification summary.}
+\label{tab:classification_main}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrr}
+\toprule
+Model & H & AUPRC & F1 & Prec. & Recall \\
+\midrule
+CET w/o alarm tokens & 1 & 0.470 & 0.361 & 0.221 & 0.975 \\
+CET-STGL-sklearn & 1 & 0.466 & 0.479 & 0.395 & 0.608 \\
+Event-attention-only & 1 & 0.257 & 0.331 & 0.226 & 0.620 \\
+Hawkes-only & 1 & 0.247 & 0.327 & 0.218 & 0.656 \\
+Ridge/Logistic & 1 & 0.471 & 0.477 & 0.418 & 0.556 \\
+Ridge/Logistic w/o alarms & 1 & 0.476 & 0.480 & 0.396 & 0.610 \\
+CET w/o alarm tokens & 3 & 0.399 & 0.348 & 0.520 & 0.262 \\
+CET-STGL-sklearn & 3 & 0.375 & 0.147 & 0.570 & 0.084 \\
+Event-attention-only & 3 & 0.249 & 0.331 & 0.218 & 0.684 \\
+Hawkes-only & 3 & 0.233 & 0.326 & 0.218 & 0.649 \\
+Ridge/Logistic & 3 & 0.341 & 0.320 & 0.191 & 0.996 \\
+Ridge/Logistic w/o alarms & 3 & 0.336 & 0.212 & 0.445 & 0.139 \\
+CET w/o alarm tokens & 6 & 0.334 & 0.331 & 0.200 & 0.975 \\
+CET-STGL-sklearn & 6 & 0.318 & 0.389 & 0.284 & 0.618 \\
+Event-attention-only & 6 & 0.215 & 0.352 & 0.245 & 0.623 \\
+Hawkes-only & 6 & 0.294 & 0.318 & 0.215 & 0.611 \\
+Ridge/Logistic & 6 & 0.309 & 0.315 & 0.402 & 0.259 \\
+Ridge/Logistic w/o alarms & 6 & 0.284 & 0.363 & 0.245 & 0.698 \\
+CET w/o alarm tokens & 12 & 0.377 & 0.334 & 0.201 & 0.989 \\
+CET-STGL-sklearn & 12 & 0.373 & 0.324 & 0.193 & 0.997 \\
+Event-attention-only & 12 & 0.240 & 0.340 & 0.238 & 0.590 \\
+Hawkes-only & 12 & 0.247 & 0.322 & 0.219 & 0.608 \\
+Ridge/Logistic & 12 & 0.381 & 0.334 & 0.201 & 0.983 \\
+Ridge/Logistic w/o alarms & 12 & 0.396 & 0.335 & 0.202 & 0.983 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3em}
+\footnotesize{Note. Labels are weak KPI-threshold labels fitted from the training split, not expert incident labels. Neural baselines are not run because PyTorch is unavailable. The event graph is causal-inspired / causal discovery-based, not confirmed causality.}
+\end{table}

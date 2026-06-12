@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated CET-STGL manuscript."
+title: "CET-STGL: Causal-Inspired Event-Token Spatio-Temporal Learning for Cellular KPI Degradation"
+authors:
+  - family-names: "Li"
+    given-names: "Dun"
+version: "0.1.0"
+date-released: "2026-06-12"
+repository-code: "https://github.com/DunLi-Tsinghua/cet-stgl-cellular-kpi"
+abstract: "Runnable sklearn code and paper artifacts for causal-inspired event-token spatio-temporal learning on private cellular KPI/alarm operations data."
