@@ -29,11 +29,7 @@ Weak alarm-candidate ranking consistency is evaluated in Table~\ref{tab:ranking_
 
 Ablation deltas relative to the full CET-STGL instantiation are reported in Table~\ref{tab:ablation_main} and Fig.~\ref{fig:ablation}. Removing alarm tokens lowers average forecasting MAE in the reported primary-KPI summary. In the evaluated slice, alarm and graph features do not improve aggregate forecasting consistently, although alarm information remains relevant to the weak association-based prioritization protocol. The ablation evidence therefore supports the methodological separation between continuous KPI dynamics, sparse event context and association-based prioritization.
 
-Component-wise ablations highlight the contribution of specific structural choices:
-\begin{enumerate}
-    \item \textbf{Patch features:} Removing tokenization increases average forecasting MAE, supporting the use of local level and slope summaries for KPI histories.
-    \item \textbf{Dynamic event graph:} Removing the dynamic event graph reduces consistency with the association-derived ranking rule, as expected. The result reflects protocol consistency rather than independent validation of operational fault-localization utility.
-\end{enumerate}
+Component-wise ablations further clarify the role of specific structural choices. Removing tokenization increases average forecasting MAE, supporting the use of local level and slope summaries for KPI histories. Removing the dynamic event graph reduces consistency with the association-derived ranking rule, as expected. The result reflects protocol consistency rather than independent validation of operational fault-localization utility.
 
 \input{tables/table_ablation_main}
 
