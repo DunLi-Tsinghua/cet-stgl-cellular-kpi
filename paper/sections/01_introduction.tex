@@ -14,7 +14,7 @@ The reliability-oriented pipeline and the main guardrails used throughout the pa
     \label{fig:cet_stgl_overview}
 \end{figure}
 
-Recent telecom LLM discussions examine language models for telecommunications \cite{maatouk2025llmtelecom}. Domain-adapted telecom LLMs focus on language and standards knowledge \cite{zou2025telecomgpt}, and networking LLM systems study adaptation to networking tasks \cite{wu2024netllm}. Benchmark proposals for industrial telecom workflows provide a separate line of context \cite{xiao2026telecombench}. This paper instead works with structured telemetry for cellular reliability analysis, with KPI forecasting, weak degradation classification and weak alarm-candidate prioritization evaluated on a private operations slice. Section~4.7 states the limits on causality, expert RCA validation and end-to-end neural spatio-temporal graph evaluation.
+Recent telecom LLM discussions examine language models for telecommunications \cite{maatouk2025llmtelecom}. Domain-adapted telecom LLMs focus on language and standards knowledge \cite{zou2025telecomgpt}, and networking LLM systems study adaptation to networking tasks \cite{wu2024netllm}. Benchmark proposals for industrial telecom workflows provide a separate line of context \cite{xiao2026telecombench}. This paper instead works with structured telemetry for cellular reliability analysis, with KPI forecasting, weak degradation classification and weak alarm-candidate prioritization evaluated on a private operations slice. Section~\ref{sec:limitations_reproducibility} states the limits on causality, expert RCA validation and end-to-end neural spatio-temporal graph evaluation.
 
 The paper makes four contributions:
 \begin{enumerate}
@@ -24,4 +24,4 @@ The paper makes four contributions:
     \item The empirical findings are narrow by design: KPI-history baselines remain strong, event-intensity variants are weak standalone predictors, the evaluated lightweight CET-STGL instantiation is competitive on several primary-KPI forecasting metrics, and gains from alarm and graph features are limited and non-uniform under the current weak-label protocol.
 \end{enumerate}
 
-The remainder of this paper is organized as follows. Section~\ref{sec:related_work} reviews related work. Section~\ref{sec:problem_method} formulates the tasks and presents CET-STGL. Section~\ref{sec:experimental_evaluation} reports the experimental evaluation and limitations. Section~\ref{sec:conclusion} concludes the paper.
+The remainder of this paper is organized as follows. Section~\ref{sec:related_work} reviews related work. Section~\ref{sec:problem_method} formulates the tasks. Section~\ref{sec:methodology} presents CET-STGL. Section~\ref{sec:experimental_evaluation} reports the experimental evaluation and limitations. Section~\ref{sec:conclusion} concludes the paper.

@@ -1,31 +1,46 @@
-\section{Problem Formulation and Methodology}
+\section{Problem Formulation}
 \label{sec:problem_method}
 \label{sec:problem_formulation}
 
-Let $\mathcal{C}$ be the set of cells and let $t$ index hourly timestamps. For each cell-time pair $(c,t)$, the panel contains a KPI/business vector $\mathbf{x}_{c,t}\in\mathbb{R}^{M}$, an alarm/fault vector $\mathbf{a}_{c,t}\in\mathbb{R}^{A}$, an anonymized cell identifier and timestamp-derived features. In the evaluated anonymized MBB operations panel, $|\mathcal{C}|=33$, $M=48$ and $A=137$, although only 11 alarm/fault columns are active in the observed slice. Given a lookback window $\mathcal{W}_{c,t}=\{(\mathbf{x}_{c,\tau},\mathbf{a}_{c,\tau}):t-L+1\leq \tau\leq t\}$, the objective is to predict outcomes at horizon $h\in\{1,3,6,12\}$ hours. Windows crossing the detected long time gap are removed before modeling.
+Let $\mathcal{C}$ denote the cell set, $\mathcal{A}$ the alarm-type set and $t$ hourly timestamps. For each cell-time pair $(c,t)$, the panel contains a KPI/business vector $\mathbf{x}_{c,t}\in\mathbb{R}^{M}$ and an alarm/fault vector $\mathbf{a}_{c,t}\in\mathbb{R}^{A}$. In the evaluated anonymized MBB panel, $|\mathcal{C}|=33$, $M=48$ and $A=137$, with 11 active alarm/fault columns. Given a lookback window
+\begin{equation}
+    \mathcal{W}_{c,t}=\{(\mathbf{x}_{c,\tau},\mathbf{a}_{c,\tau}):t-L+1\leq \tau\leq t\},
+\end{equation}
+the objective is to predict outcomes at $h\in\{1,3,6,12\}$ hours. Windows crossing the detected long time gap are removed before modeling.
 
-A feature representation for target $(c,t+h)$ is called temporally admissible if it is constructed only from $\mathcal{W}_{c,t}$, static or timestamp-derived identifiers available at $t$, and statistics fitted on the chronological training partition. CET-STGL uses this constraint throughout to separate operationally available evidence from future outcomes.
+For a target $(c,t+h)$, CET-STGL uses a representation
+\begin{equation}
+    \mathbf{z}_{c,t,h}=\Phi_h(\mathcal{W}_{c,t},c,t;\Theta_{\mathrm{train}}),
+\end{equation}
+where $\Theta_{\mathrm{train}}$ contains thresholds, scalers, event priors and graph statistics fitted on the chronological training partition. The representation is temporally admissible when $\mathbf{z}_{c,t,h}$ depends only on $\mathcal{W}_{c,t}$, identifiers and time features available at $t$, and $\Theta_{\mathrm{train}}$.
 
 \subsection{KPI Forecasting}
-The forecasting task is to predict future KPI values, as formalized here below:
+The forecasting task predicts future KPI values:
 \begin{equation}
-    \hat{\mathbf{x}}_{c,t+h} = f_h(\mathcal{W}_{c,t}, c, t),
+    \hat{\mathbf{x}}_{c,t+h}=f_h(\mathbf{z}_{c,t,h}),
 \end{equation}
-where $\hat{\mathbf{x}}_{c,t+h}$ is the predicted KPI vector at horizon $h$, $\mathcal{W}_{c,t}$ is the historical lookback window for cell $c$ at time $t$, and $f_h$ represents the forecasting mapping function. Forecasting labels are real future observations from the private cellular panel. We report aggregate metrics over all KPI/business columns and paper-level metrics over the primary KPI subset.
+where $f_h$ is the horizon-specific forecasting map. Forecasting labels are real future observations from the private cellular panel. We report aggregate metrics over all KPI/business columns and primary-KPI metrics for the paper-level comparison.
 
 \subsection{Weak Degradation Classification}
-The degradation task is to predict a weak binary label, formalized as follows:
+The degradation task predicts a weak binary label:
 \begin{equation}
-    \hat{y}_{c,t+h} = g_h(\mathcal{W}_{c,t}, c, t), \quad y_{c,t+h}\in\{0,1\},
+    \hat{p}_{c,t+h}=g_h(\mathbf{z}_{c,t,h}),\qquad
+    y_{c,t+h}=\mathbf{1}\left[\bigvee_{j=1}^{5} q_j(c,t+h)\right].
 \end{equation}
-where $\hat{y}_{c,t+h}$ is the predicted degradation probability, $y_{c,t+h}$ is the weak binary indicator, and $g_h$ denotes the classification function. The label is derived from thresholds fitted on the training split. The evaluated implementation uses five independent OR conditions: high call-drop rate above the larger of 1.0\% and the cell-specific training 99th percentile; low Radio Resource Control (RRC) setup success rate below the smaller of 98.0\% and the cell-specific training 5th percentile; low Evolved Radio Access Bearer (E-RAB) setup success rate below the smaller of 98.0\% and the cell-specific training 5th percentile; low downlink user throughput in Mbps below the cell-specific training 10th percentile; or low dimensionless Channel Quality Indicator (CQI) below the cell-specific training 10th percentile. Cell-specific thresholds are replaced by the corresponding full-training-partition thresholds when fewer than 24 non-missing training samples are available for the relevant cell and KPI, or when the computed cell-level threshold is not finite. The label is therefore a weak KPI degradation proxy rather than an expert incident label, following weak-supervision practice for indirect or noisy supervision \cite{zhou2018weakly,ratner2020snorkel}.
+The five independent OR conditions $q_j$ are high call-drop rate above $\max(1.0\%,Q^{c}_{0.99})$, low Radio Resource Control (RRC) setup success rate below $\min(98.0\%,Q^{c}_{0.05})$, low Evolved Radio Access Bearer (E-RAB) setup success rate below $\min(98.0\%,Q^{c}_{0.05})$, low downlink user throughput below $Q^{c}_{0.10}$, and low dimensionless Channel Quality Indicator (CQI) below $Q^{c}_{0.10}$, where $Q^{c}_{\alpha}$ denotes the cell-specific training quantile of the corresponding KPI. The matching full-training threshold is used when the cell-level threshold cannot be computed from at least 24 non-missing training samples or is not finite. The label is therefore a weak KPI degradation proxy rather than an expert incident label, following weak-supervision practice for indirect or noisy supervision \cite{zhou2018weakly,ratner2020snorkel}.
 
 \subsection{Weak Alarm-Candidate Prioritization}
-For degraded samples with recent alarms, the ranking task scores candidate alarm types $a\in\mathcal{A}_{c,t}$ as follows:
+For degraded samples with recent alarms, the candidate set is
 \begin{equation}
-    s_h(a,c,t)=r_h(a,\mathcal{W}_{c,t},c,t),
+    \mathcal{A}_{c,t}=\left\{a\in\mathcal{A}:\sum_{\tau=t-L+1}^{t}
+    \mathbf{1}[\mathbf{a}_{c,\tau}^{(a)}>0]>0\right\}.
 \end{equation}
-where $s_h(a,c,t)$ is the prioritization score assigned to alarm candidate $a$ in cell $c$ at time $t$, and $r_h$ is the scoring function. The target candidate is induced by train-only alarm-to-degradation lift and recent event intensity. The ranking task evaluates weak-label consistency only. It is not expert-confirmed root-cause localization.
+The weak target candidate is induced by train-only alarm-to-degradation lift and recent event intensity,
+\begin{equation}
+    a^{\star}_{c,t,h}=\arg\max_{a\in\mathcal{A}_{c,t}}
+    \max(0,\ell_h(a))\,\lambda_a(c,t),
+\end{equation}
+where $\ell_h(a)$ is the train-only log-lift and $\lambda_a(c,t)$ is the decayed event intensity. A model produces a ranked list $\widehat{\pi}_{c,t,h}$ over $\mathcal{A}_{c,t}$. The task evaluates weak-label consistency only and is not expert-confirmed fault localization.
 
 \subsection{Causal-Inspired Graph Boundary}
 The event influence graph is constructed from temporal precedence and train-only association. It is useful for organizing candidate event influence, but the observational data contain no interventions or expert causal annotations. We therefore use only causal-inspired terminology and avoid causal-effect claims.
