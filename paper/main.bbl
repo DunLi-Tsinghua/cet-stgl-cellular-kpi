@@ -24,6 +24,35 @@ C.~Zhang, P.~Patras, H.~Haddadi,
   {\path{doi:10.1109/COMST.2019.2904897}}.
 \newline\urlprefix\url{https://doi.org/10.1109/COMST.2019.2904897}
 
+\bibitem{lin2023embracing}
+X.~Lin, L.~Kundu, C.~Dick, S.~Velayutham,
+  \href{https://doi.org/10.1109/MCOMSTD.0005.2200070}{Embracing {AI} in
+  {5G}-advanced toward {6G}: A joint {3GPP} and {O-RAN} perspective}, IEEE
+  Communications Standards Magazine 7~(4) (2023) 76--83.
+\newblock \href {https://doi.org/10.1109/MCOMSTD.0005.2200070}
+  {\path{doi:10.1109/MCOMSTD.0005.2200070}}.
+\newline\urlprefix\url{https://doi.org/10.1109/MCOMSTD.0005.2200070}
+
+\bibitem{polese2023oran}
+M.~Polese, L.~Bonati, S.~D'Oro, S.~Basagni, T.~Melodia,
+  \href{https://doi.org/10.1109/COMST.2023.3239220}{Understanding {O-RAN}:
+  Architecture, interfaces, algorithms, security, and research challenges},
+  IEEE Communications Surveys \& Tutorials 25~(2) (2023) 1376--1411.
+\newblock \href {https://doi.org/10.1109/COMST.2023.3239220}
+  {\path{doi:10.1109/COMST.2023.3239220}}.
+\newline\urlprefix\url{https://doi.org/10.1109/COMST.2023.3239220}
+
+\bibitem{alam2026oransurvey}
+K.~Alam, M.~A. Habibi, M.~Tammen, D.~Krummacker, W.~Saad, M.~Di~Renzo,
+  T.~Melodia, X.~Costa-P{\'e}rez, M.~Debbah, A.~Dutta, H.~D. Schotten,
+  \href{https://doi.org/10.1109/COMST.2025.3598406}{A comprehensive tutorial
+  and survey of {O-RAN}: Exploring slicing-aware architecture, deployment
+  options, use cases, and challenges}, IEEE Communications Surveys \& Tutorials
+  28 (2026) 1637--1678.
+\newblock \href {https://doi.org/10.1109/COMST.2025.3598406}
+  {\path{doi:10.1109/COMST.2025.3598406}}.
+\newline\urlprefix\url{https://doi.org/10.1109/COMST.2025.3598406}
+
 \bibitem{brik2025xaioran}
 B.~Brik, H.~Chergui, L.~Zanzi, F.~Devoti, A.~Ksentini, M.~S. Siddiqui,
   X.~Costa-P{\'e}rez, C.~Verikoukis,
@@ -44,6 +73,15 @@ Z.~Feng, Q.~Wu, X.~Chen,
 \newblock \href {https://doi.org/10.1145/3637528.3671730}
   {\path{doi:10.1145/3637528.3671730}}.
 \newline\urlprefix\url{https://doi.org/10.1145/3637528.3671730}
+
+\bibitem{thomas2024causalreasoning}
+C.~K. Thomas, C.~Chaccour, W.~Saad, M.~Debbah, C.~S. Hong,
+  \href{https://doi.org/10.1109/MVT.2024.3359357}{Causal reasoning: Charting a
+  revolutionary course for next-generation {AI}-native wireless networks}, IEEE
+  Vehicular Technology Magazine 19~(1) (2024) 16--31.
+\newblock \href {https://doi.org/10.1109/MVT.2024.3359357}
+  {\path{doi:10.1109/MVT.2024.3359357}}.
+\newline\urlprefix\url{https://doi.org/10.1109/MVT.2024.3359357}
 
 \bibitem{wang2017spatiotemporal}
 J.~Wang, J.~Tang, Z.~Xu, Y.~Wang, G.~Xue, X.~Zhang, D.~Yang,
@@ -125,15 +163,6 @@ C.-X. Wang, X.~You, X.~Gao, X.~Zhu, Z.~Li, C.~Zhang, H.~Wang, Y.~Huang,
 \newblock \href {https://doi.org/10.1109/COMST.2023.3249835}
   {\path{doi:10.1109/COMST.2023.3249835}}.
 \newline\urlprefix\url{https://doi.org/10.1109/COMST.2023.3249835}
-
-\bibitem{polese2023oran}
-M.~Polese, L.~Bonati, S.~D'Oro, S.~Basagni, T.~Melodia,
-  \href{https://doi.org/10.1109/COMST.2023.3239220}{Understanding {O-RAN}:
-  Architecture, interfaces, algorithms, security, and research challenges},
-  IEEE Communications Surveys \& Tutorials 25~(2) (2023) 1376--1411.
-\newblock \href {https://doi.org/10.1109/COMST.2023.3239220}
-  {\path{doi:10.1109/COMST.2023.3239220}}.
-\newline\urlprefix\url{https://doi.org/10.1109/COMST.2023.3239220}
 
 \bibitem{li2025ranalarm}
 L.~Li, M.~Herrera, A.~Mukherjee, G.~Zheng, C.~Chen, M.~Dhada, H.~Brice,
@@ -434,5 +463,38 @@ Z.~Wu, S.~Pan, G.~Long, J.~Jiang, C.~Zhang,
 \newblock \href {https://doi.org/10.24963/ijcai.2019/264}
   {\path{doi:10.24963/ijcai.2019/264}}.
 \newline\urlprefix\url{https://doi.org/10.24963/ijcai.2019/264}
+
+\bibitem{hoerl1970ridge}
+A.~E. Hoerl, R.~W. Kennard,
+  \href{https://doi.org/10.1080/00401706.1970.10488634}{Ridge regression:
+  Biased estimation for nonorthogonal problems}, Technometrics 12~(1) (1970)
+  55--67.
+\newblock \href {https://doi.org/10.1080/00401706.1970.10488634}
+  {\path{doi:10.1080/00401706.1970.10488634}}.
+\newline\urlprefix\url{https://doi.org/10.1080/00401706.1970.10488634}
+
+\bibitem{hochreiter1997lstm}
+S.~Hochreiter, J.~Schmidhuber,
+  \href{https://doi.org/10.1162/neco.1997.9.8.1735}{Long short-term memory},
+  Neural Computation 9~(8) (1997) 1735--1780.
+\newblock \href {https://doi.org/10.1162/neco.1997.9.8.1735}
+  {\path{doi:10.1162/neco.1997.9.8.1735}}.
+\newline\urlprefix\url{https://doi.org/10.1162/neco.1997.9.8.1735}
+
+\bibitem{bai2018tcn}
+S.~Bai, J.~Z. Kolter, V.~Koltun, \href{https://arxiv.org/abs/1803.01271}{An
+  empirical evaluation of generic convolutional and recurrent networks for
+  sequence modeling}, arXiv preprint arXiv:1803.01271 (2018).
+\newblock \href {http://arxiv.org/abs/1803.01271} {\path{arXiv:1803.01271}}.
+\newline\urlprefix\url{https://arxiv.org/abs/1803.01271}
+
+\bibitem{pedregosa2011sklearn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, {\'E}.~Duchesnay,
+  \href{https://jmlr.org/papers/v12/pedregosa11a.html}{Scikit-learn: Machine
+  learning in {Python}}, Journal of Machine Learning Research 12~(85) (2011)
+  2825--2830.
+\newline\urlprefix\url{https://jmlr.org/papers/v12/pedregosa11a.html}
 
 \end{thebibliography}
