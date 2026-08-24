@@ -7,9 +7,11 @@ private_data/
 
 # Large/generated private experiment outputs
 results/private_run/
+results/private_neural/
 results/*/forecast_*.csv
 results/*/degradation_*.csv
 results/*/root_cause_ranking_*.csv
+results/*/alarm_candidate_*.csv
 
 # Python
 __pycache__/
@@ -23,6 +25,7 @@ venv/
 *.blg
 *.log
 *.out
+*.spl
 *.toc
 *.synctex.gz
 

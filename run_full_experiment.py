@@ -141,21 +141,15 @@ def feature_specs() -> list[FeatureSpec]:
 
 
 def backend_status_rows() -> list[dict[str, str]]:
-    try:
-        import torch  # noqa: F401
-
-        torch_status = "available"
-        reason = ""
-    except Exception:
-        torch_status = "not_run_backend_missing"
-        reason = "PyTorch is not installed in the current runtime; sklearn proxy and interfaces are runnable."
+    sequence_reason = "Fixed sequence baseline metrics are produced by run_neural_baselines.py."
+    graph_reason = "Neural spatio-temporal graph baselines are not implemented in this repository."
     return [
-        {"model": "lstm", "status": torch_status, "reason": reason},
-        {"model": "tcn", "status": torch_status, "reason": reason},
-        {"model": "informer", "status": torch_status, "reason": reason},
-        {"model": "autoformer", "status": torch_status, "reason": reason},
-        {"model": "stgcn", "status": torch_status, "reason": reason},
-        {"model": "gat", "status": torch_status, "reason": reason},
+        {"model": "lstm", "status": "separate_sequence_runner", "reason": sequence_reason},
+        {"model": "tcn", "status": "separate_sequence_runner", "reason": sequence_reason},
+        {"model": "informer", "status": "not_implemented", "reason": graph_reason},
+        {"model": "autoformer", "status": "not_implemented", "reason": graph_reason},
+        {"model": "stgcn", "status": "not_implemented", "reason": graph_reason},
+        {"model": "gat", "status": "not_implemented", "reason": graph_reason},
     ]
 
 
@@ -437,7 +431,7 @@ def write_results_markdown(
     md = [
         "# EXPERIMENT_RESULTS",
         "",
-        "Paper line: **Causal Event-Token Spatio-Temporal Graph Learning for Alarm-Driven KPI Degradation Prediction in Cellular Networks**.",
+        "Paper line: **CET-STGL: A Causal-Inspired Event-Token Spatio-Temporal Framework for Alarm-Aware KPI Degradation Prediction in Cellular Networks**.",
         "",
         "All reported runnable metrics are computed from the current private `510957.csv` data or weak labels derived from it. This file does not claim a telecom foundation model and does not claim strict causality.",
         "",
@@ -456,15 +450,15 @@ def write_results_markdown(
             classification.sort_values(["horizon", "model"]),
             ["model", "horizon", "positive_rate", "f1_at_0_5", "auroc", "auprc"],
         ),
-        "## Weak Root-Cause Ranking Metrics",
+        "## Weak Alarm-Candidate Ranking Metrics",
         "",
-        "Root-cause ranking uses weak labels only. The weak label is the top recent alarm candidate under train-only lagged alarm-to-degradation lift and recent event intensity.",
+        "Weak alarm-candidate ranking uses proxy labels only. The weak label is the top recent alarm candidate under train-only lagged alarm-to-degradation lift and recent event intensity.",
         "",
         simple_markdown_table(
             ranking.sort_values(["horizon", "model"]),
             ["model", "horizon", "ranking_samples", "hit_at_1", "hit_at_3", "hit_at_5", "mrr", "ndcg_at_5"],
         ),
-        "## Neural Baseline Status",
+        "## Additional Neural Baseline Notes",
         "",
         simple_markdown_table(model_status, ["model", "status", "reason"]),
         "## Output Files",
@@ -484,17 +478,17 @@ Figure-ready CSV files generated from the current `510957.csv` experiments:
 
 - Forecasting metrics: `{out_dir / 'figure_forecasting_metrics.csv'}`
 - Degradation classification metrics: `{out_dir / 'figure_classification_metrics.csv'}`
-- Weak root-cause ranking metrics: `{out_dir / 'figure_ranking_metrics.csv'}`
+- Weak alarm-candidate ranking metrics: `{out_dir / 'figure_ranking_metrics.csv'}`
 - Ablation summary: `{out_dir / 'figure_ablation_summary.csv'}`
 
 Suggested paper figures:
 
 1. Multi-horizon KPI forecasting: line/bar plot of `mae_mean` and `rmse_mean` by model and horizon.
 2. KPI degradation prediction: AUPRC/AUROC by model and horizon.
-3. Weak root-cause ranking: Hit@K and MRR by model and horizon.
+3. Weak alarm-candidate ranking: Hit(K) and MRR by model and horizon.
 4. Ablation: compare `cet_stgl_sklearn` against each `cet_ablation_*` variant.
 
-Interpretation boundary: ranking labels are weak labels, not expert-verified root causes.
+Interpretation boundary: ranking labels are weak labels, not expert-verified fault-localization labels.
 """
     (root / "EXPERIMENT_FIGURES.md").write_text(text, encoding="utf-8")
 

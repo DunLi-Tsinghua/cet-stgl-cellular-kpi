@@ -30,5 +30,5 @@ data_private/510957.csv
 
 ## Weak Labels
 
-Forecasting labels are real future KPI values. Degradation and root-cause ranking labels are weak labels fitted from the training split only. Ranking labels should be interpreted as weak-label/proxy consistency, not expert-confirmed root cause.
+Forecasting labels are real future KPI values. Degradation labels and weak alarm-candidate ranking labels are fitted from the training split only. Ranking labels should be interpreted as weak-label/proxy consistency, not expert-confirmed fault localization.
 

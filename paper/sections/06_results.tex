@@ -1,55 +1,66 @@
-\section{Results and Analysis}
+\subsection{KPI Forecasting Results}
+\label{sec:forecasting_results}
+\label{sec:results}
 
-\subsection{KPI Forecasting}
-Table~\ref{tab:forecasting_main} and Fig.~\ref{fig:forecasting} summarize primary-KPI forecasting. CET-STGL-sklearn is competitive with the Ridge/Logistic baseline on several horizons. At 1 hour, CET-STGL-sklearn obtains MAE/RMSE 2.183/4.635, compared with 2.219/4.698 for Ridge/Logistic. At 3 hours the corresponding values are 2.537/5.083 versus 3.071/5.684. At 6 hours they are 3.197/5.853 versus 3.338/5.940. At 12 hours CET-STGL-sklearn has slightly lower MAE but slightly higher RMSE than Ridge/Logistic.
+Continuous KPI forecasting performance across horizons is reported in Table~\ref{tab:forecasting_main}, with the main CET-STGL, classical and event-based trends visualized in Fig.~\ref{fig:forecasting}. CET-STGL-sklearn is competitive with the feature-engineered Ridge baseline on the primary-KPI subset. At $h=1$\,h, CET-STGL-sklearn obtains MAE/RMSE values of 2.183/4.635, compared with 2.219/4.698 for Ridge/Logistic. At $h=3$\,h and $h=6$\,h, CET-STGL-sklearn remains lower in MAE than Ridge/Logistic. At $h=12$\,h, the two models are close: CET-STGL-sklearn has slightly lower MAE, while Ridge/Logistic has slightly lower RMSE.
 
-This evidence supports a restrained claim of competitiveness rather than universal superiority. The no-alarm CET ablation has the lowest primary MAE at all four horizons in the current results. Therefore, the paper cannot claim that alarm tokens uniformly improve forecasting. The likely explanation is data-driven: active alarms occur in only 1.62\% of rows, while many KPI values are governed by temporal demand, load and radio-quality dynamics.
-
-Event-only methods are much weaker for continuous forecasting. Hawkes-only has 1-hour primary MAE/RMSE 4.578/7.981, and Event-attention-only is similarly weak. Sparse alarm events alone therefore do not reconstruct continuous KPI trajectories in this slice.
+The no-alarm CET-STGL ablation achieves lower MAE and RMSE than the full CET-STGL instantiation at all four horizons. The pattern is consistent with the high sparsity of alarm observations: active alarms appear in only 1.62\% of rows, while routine KPI variation is largely described by continuous temporal and cell-specific patterns. From a reliability perspective, the ablation indicates that sparse alarms should be treated as contextual evidence rather than universal predictors of routine KPI evolution. Standalone event-intensity baselines remain weak for continuous forecasting, with Hawkes-only producing an $h=1$\,h MAE/RMSE of 4.578/7.981. The fixed LSTM baseline has higher primary-KPI MAE/RMSE than CET-STGL-sklearn and Ridge/Logistic at all horizons, and the fixed TCN baseline is weaker under the same protocol.
 
 \input{tables/table_forecasting_main}
 
-\subsection{Weak KPI Degradation Classification}
-Table~\ref{tab:classification_main} and Fig.~\ref{fig:classification} report weak degradation classification. At 1 hour, CET-STGL-sklearn obtains AUPRC/F1 0.466/0.479. Ridge/Logistic obtains 0.471/0.477, while Ridge/Logistic without alarms obtains 0.476/0.480. At later horizons, the relative ordering changes by metric and horizon, but the overall message is stable: alarm/event features do not provide a uniform gain under weak KPI-threshold labels.
+\subsection{Weak Degradation Classification Results}
+\label{sec:classification_results}
 
-The event-only baselines again expose the sparsity limitation. Hawkes-only and Event-attention-only are weaker than KPI-history baselines in AUPRC at the 1-hour horizon, with AUPRC 0.247 and 0.257 respectively. This does not mean alarms are useless; it means that, in this dataset, alarms are better interpreted as sparse event context and weak ranking candidates than as standalone predictors of threshold-derived degradation.
+Weak degradation classification performance is summarized in Table~\ref{tab:classification_main}, while Fig.~\ref{fig:classification} gives the corresponding CET-STGL, classical and event-based comparisons. At $h=1$\,h, CET-STGL-sklearn obtains an AUPRC of 0.466 and F1-score of 0.479, performing comparably to the feature-engineered linear logistic baselines (AUPRC 0.471--0.476). Across longer horizons, AUPRC values among the feature-engineered baselines remain relatively close, whereas threshold-dependent F1, Precision and Recall vary substantially across models and horizons. LSTM provides a useful neural sequence comparator and is competitive on AUPRC at some horizons, but it does not dominate the linear and CET-STGL variants across metrics.
+
+Event-only models exhibit limited discriminative power for threshold-based degradation prediction, with Hawkes-only and Event-attention-only attaining lower AUPRC scores of 0.247 and 0.257 at $h=1$\,h, respectively. Sparse network alarms are weak standalone predictors under the present protocol.
 
 \input{tables/table_classification_main}
 
-\subsection{Weak Root-Cause Candidate Ranking}
-Table~\ref{tab:ranking_main} and Fig.~\ref{fig:ranking} show weak ranking consistency. CET-STGL-sklearn reaches perfect weak-label consistency in this setup, while Hawkes-only obtains Hit@1 around 0.80 and MRR around 0.89 across horizons. These numbers must not be interpreted as true root-cause localization accuracy. The ranking labels are derived from train-only alarm-to-degradation lift and recent event intensity, and some model variants use overlapping signals in scoring. The appropriate interpretation is that the ranking head can recover proxy candidates induced by the weak-label rule.
+\subsection{Weak Alarm-Candidate Prioritization Results}
+\label{sec:ranking_results}
+
+Weak alarm-candidate ranking consistency is evaluated in Table~\ref{tab:ranking_main} and Fig.~\ref{fig:ranking}. Both the target candidate and the ranking score are derived from association-based weak rules using event intensity and train-only lift. Values of 1.000 therefore indicate agreement with the weak protocol, not verified operational fault localization. The Hawkes-only and no-dynamic-graph rows act as diagnostic checks because they retain event recency but remove the full association-derived scoring structure, yielding $\mathrm{Hit}(1)$ values near 0.80 and MRR values near 0.89.
 
 \input{tables/table_ranking_main}
 
-\subsection{Ablation Analysis}
-Table~\ref{tab:ablation_main} and Fig.~\ref{fig:ablation} summarize ablation deltas relative to CET-STGL-sklearn. Removing alarm tokens improves average forecasting MAE relative to the full proxy, which is consistent with the finding that KPI history dominates aggregate forecasting in this sparse-alarm slice. Removing Hawkes/event intensity changes several metrics only slightly, suggesting that current decayed-intensity features are either redundant with simpler alarm counts or too sparse to dominate. Removing tokenization has a larger adverse forecasting effect, indicating that patch-style KPI summaries are useful for the current proxy. Removing the dynamic event graph hurts weak ranking consistency because the ranking proxy depends on alarm-lift structure; this is a weak-label diagnostic, not root-cause proof.
+\subsection{Ablation and Component Analysis}
+\label{sec:ablation_results}
+
+Ablation deltas relative to the full CET-STGL instantiation are reported in Table~\ref{tab:ablation_main} and Fig.~\ref{fig:ablation}. Removing alarm tokens lowers average forecasting MAE in the reported primary-KPI summary. In the evaluated slice, alarm and graph features do not improve aggregate forecasting consistently, although alarm information remains relevant to the weak association-based prioritization protocol. The ablation evidence therefore supports the methodological separation between continuous KPI dynamics, sparse event context and association-based prioritization.
+
+Component-wise ablations highlight the contribution of specific structural choices:
+\begin{enumerate}
+    \item \textbf{Patch features:} Removing tokenization increases average forecasting MAE, supporting the use of local level and slope summaries for KPI histories.
+    \item \textbf{Dynamic event graph:} Removing the dynamic event graph reduces consistency with the association-derived ranking rule, as expected. The result reflects protocol consistency rather than independent validation of operational fault-localization utility.
+\end{enumerate}
 
 \input{tables/table_ablation_main}
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=\linewidth]{figures/Fig1_forecasting_vs_horizon.pdf}
-    \caption{Primary-KPI forecasting error versus horizon. The plot uses real future KPI values from the private panel. Lower values are better. Neural baselines are not included because PyTorch is unavailable.}
+    \caption{Primary-KPI forecasting error versus prediction horizon.}
     \label{fig:forecasting}
 \end{figure}
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=\linewidth]{figures/Fig2_classification_comparison.pdf}
-    \caption{Weak KPI degradation classification under training-split threshold labels. Scores are not expert incident-detection accuracy, and alarm/event features do not uniformly improve performance under the current weak labels.}
+    \caption{KPI degradation classification performance versus prediction horizon.}
     \label{fig:classification}
 \end{figure}
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=\linewidth]{figures/Fig3_ablation_delta.pdf}
-    \caption{Ablation deltas relative to CET-STGL-sklearn. Negative deltas are better for MAE, while positive deltas are better for AUPRC and MRR. Ranking deltas reflect weak-label/proxy consistency only.}
+    \caption{Ablation deltas relative to CET-STGL-sklearn.}
     \label{fig:ablation}
 \end{figure}
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=\linewidth]{figures/Fig4_weak_ranking_comparison.pdf}
-    \caption{Weak root-cause candidate ranking consistency. These are proxy labels derived from train-only alarm lift and recent event intensity, not expert-confirmed root causes.}
+    \caption{Weak alarm-candidate ranking consistency versus prediction horizon.}
     \label{fig:ranking}
 \end{figure}

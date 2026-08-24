@@ -1,16 +1,17 @@
-\begin{table*}[t]
+\begin{table}[t]
 \centering
-\caption{Dataset statistics for the private cellular operations panel.}
+\caption{Dataset statistics for the anonymized Huawei MBB operations data and evaluated cell-time panel.}
 \label{tab:data_stats}
 \begin{tabularx}{\textwidth}{lX}
 \toprule
 Item & Value \\
 \midrule
+Collection scope & Approximately 500 MBB cellular sites in the source collection \\
 Rows & 103,983 \\
 Original columns & 187 \\
-Cells & 33 \\
+Anonymized cell entities in evaluated panel & 33 \\
 Unique hourly timestamps & 3,151 \\
-Time range & 2024-01-10 00:00:00 to 2024-06-10 06:00:00 \\
+Observed time structure & 3,151 unique hourly timestamps in the evaluated panel; exact site-identifiable information is not used \\
 KPI/business columns & 48 \\
 Alarm/fault columns & 137 \\
 Active alarm/fault columns & 11 \\
@@ -20,6 +21,4 @@ Detected time discontinuity & One 21 days 01:00:00 gap; crossing windows removed
 \bottomrule
 \end{tabularx}
 
-\vspace{0.3em}
-\footnotesize{Note. The data are a private cellular operations slice from \texttt{510957.csv}, not a public benchmark. Neural baselines are not run because the PyTorch backend is unavailable. Root-cause ranking is weak-label/proxy consistency, not expert-confirmed root cause. The event graph is causal-inspired / causal discovery-based, not confirmed causality.}
-\end{table*}
+\end{table}

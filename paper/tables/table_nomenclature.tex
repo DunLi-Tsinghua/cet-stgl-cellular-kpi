@@ -1,0 +1,57 @@
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}lp{0.8\linewidth}@{}}
+\caption{Nomenclature of Acronyms and Symbols.}
+\label{tab:nomenclature}\\
+\toprule
+\textbf{Item} & \textbf{Description} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Item} & \textbf{Description} \\
+\midrule
+\endhead
+
+\multicolumn{2}{@{}l}{\textbf{Acronyms}} \\
+\midrule
+AIOps & Artificial Intelligence for IT Operations \\
+AUPRC & Area Under the Precision-Recall Curve \\
+AUROC & Area Under the Receiver Operating Characteristic Curve \\
+CET-STGL & Causal-Inspired Event-Token Spatio-Temporal Framework \\
+KPI & Key Performance Indicator \\
+MAE & Mean Absolute Error \\
+MAPE & Mean Absolute Percentage Error \\
+MBB & Mobile Broadband \\
+MRR & Mean Reciprocal Rank \\
+nDCG & Normalized Discounted Cumulative Gain \\
+O-RAN & Open Radio Access Network \\
+RCA & Root-Cause Analysis \\
+RMSE & Root Mean Square Error \\
+
+\midrule
+\multicolumn{2}{@{}l}{\textbf{Symbols}} \\
+\midrule
+$\mathcal{C}$ & Set of evaluated cellular sites \\
+$c, t$ & Indices for cell entity and hourly timestamp \\
+$h$ & Forecasting horizon in hours ($h \in \{1, 3, 6, 12\}$) \\
+$L$ & Lookback window length \\
+$\mathbf{x}_{c,t}$ & KPI and business counter vector at cell $c$, time $t$ \\
+$\mathbf{a}_{c,t}$ & Alarm and fault vector at cell $c$, time $t$ \\
+$\mathcal{W}_{c,t}$ & Historical lookback window for a given cell and time \\
+$M, A$ & Dimensionality of KPI vector and alarm vector, respectively \\
+$f_h, g_h, r_h$ & Mapping functions for forecasting, classification, and ranking tasks \\
+$\hat{\mathbf{x}}_{c,t+h}$ & Predicted KPI vector at horizon $h$ \\
+$y_{c,t+h}, \hat{y}_{c,t+h}$ & Ground-truth weak binary degradation indicator and predicted probability \\
+$\mathcal{A}_{c,t}$ & Set of candidate alarm types for ranking \\
+$s_h(a,c,t)$ & Ranking score assigned to alarm candidate $a$ \\
+$\phi^{\mathrm{kpi}}_{c,t,p,m}$ & Extracted patch-based feature summary for KPI $m$ \\
+$\lambda_a(c,t)$ & Decayed event intensity for alarm type $a$ \\
+$\eta$ & Fixed decay scale for event intensity \\
+$\mathrm{lift}_h(a)$ & Train-only event influence prior (lagged lift) for alarm $a$ \\
+$P_{\mathrm{train}}$ & Probability estimated within the training set \\
+$G_{\mathrm{cell}}$ & Inferred cross-cell statistical context graph \\
+$E$ & Edges within the cross-cell graph $G_{\mathrm{cell}}$ \\
+\bottomrule
+\end{longtable}
+\endgroup

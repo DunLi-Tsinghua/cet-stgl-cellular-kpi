@@ -1,6 +1,6 @@
 \section{Full Experimental Tables}
 
-The main paper reports compact summary tables for readability. This appendix retains the full runnable model-by-horizon tables generated from the existing paper artifacts. Neural baselines are listed only in the backend-status table; no neural metrics are fabricated.
+The main paper reports compact summary tables for readability. The appendix retains the full runnable model-by-horizon tables generated from the existing paper artifacts.
 
 \subsection{Full Forecasting Results}
 \input{tables/table_forecasting_results}
@@ -14,9 +14,13 @@ The main paper reports compact summary tables for readability. This appendix ret
 \subsection{Full Ablation Delta Table}
 \input{tables/table_ablation_delta}
 
-\subsection{Backend Status}
-\input{tables/table_model_status}
+\clearpage
+\section{Nomenclature}
+% Reset table counter and update prefix for Appendix B
+\setcounter{table}{0}
+\renewcommand{\thetable}{B.\arabic{table}}
+\input{tables/table_nomenclature}
 
-\section{Additional Reproducibility Notes}
+\section{Data Availability and Reproducibility}
 
-All reported runnable metrics are derived from the private \texttt{510957.csv} panel or weak labels fitted from the training split. Forecasting uses real future KPI values. Weak degradation classification uses KPI-threshold labels, and weak root-cause ranking uses train-only alarm-lift/event-intensity candidates. The table and figure source CSV/JSON files are retained in \texttt{paper\_cet\_stgl/source\_artifacts/}. The script \texttt{scripts/build\_cet\_stgl\_paper\_package.py} records the earlier table/figure generation process; the current manuscript does not rerun any model.
+The underlying Huawei MBB operational records are anonymized enterprise data and cannot be publicly released because they contain confidential network performance and alarm information. To support reproducibility within these restrictions, the project repository provides the source code, sanitized schema, synthetic examples and artifacts used to generate the manuscript tables and figures. Exact metric reproduction requires authorized access to the raw operational records and the chronological train-only fitting protocol described in Section~\ref{sec:data_protocol}.

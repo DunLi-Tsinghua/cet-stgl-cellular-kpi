@@ -52,7 +52,7 @@ def maybe_limit(X, y_reg, y_cls, meta, max_samples: int | None):
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Smoke-test the alarm-driven KPI degradation pipeline.")
+    parser = argparse.ArgumentParser(description="Smoke-test the alarm-aware KPI degradation pipeline.")
     parser.add_argument("--csv", type=Path, default=None, help="Path to 510957.csv. If omitted, auto-discover under cwd.")
     parser.add_argument("--config", type=Path, default=Path(__file__).resolve().parent / "configs" / "default.json")
     parser.add_argument("--horizons", default="1,3", help="Comma-separated horizons for the smoke run.")
